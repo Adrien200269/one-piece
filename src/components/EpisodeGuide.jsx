@@ -182,6 +182,19 @@ export default function EpisodeGuide({ watchedSagas, setWatchedSagas }) {
               {/* Expanded Manga Breakdown */}
               {isExpanded && (
                 <div className="px-5 pb-6 pt-3 border-t-2 border-white bg-black space-y-4">
+                  {saga.mangaPanel && (
+                    <div className="relative border-2 border-white aspect-[21/9] sm:aspect-[24/8] overflow-hidden bg-black flex items-center justify-center">
+                      <img
+                        src={saga.mangaPanel}
+                        alt={`${saga.title} manga panel`}
+                        className="w-full h-full object-cover manga-ink-img"
+                      />
+                      <div className="absolute top-2 right-2 bg-black/90 border border-white px-2 py-0.5 text-white font-mono text-[10px] tracking-wider">
+                        MANGA ARCHIVE • SAGA #{index + 1}
+                      </div>
+                    </div>
+                  )}
+
                   <p className="text-sm text-neutral-300 font-serif leading-relaxed">
                     {saga.synopsis}
                   </p>

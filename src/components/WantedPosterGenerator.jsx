@@ -12,14 +12,14 @@ import confetti from 'canvas-confetti';
 import { playCannonBlast, playTreasureFanfare, playWoodenClick } from '../utils/audio';
 
 const MANGA_PORTRAIT_PRESETS = [
-  { label: 'Luffy (Gear 5)', url: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&auto=format&fit=crop&q=80' },
-  { label: 'Zoro (King of Hell)', url: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80' },
-  { label: 'Shanks (Divine Departure)', url: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=600&auto=format&fit=crop&q=80' },
-  { label: 'Whitebeard (Quake)', url: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80' },
-  { label: 'Law (Surgeon)', url: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80' },
-  { label: 'Ace (Fire Fist)', url: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=80' },
-  { label: 'Kaido (Dragon)', url: 'https://images.unsplash.com/photo-1563089145-599997674d42?w=600&auto=format&fit=crop&q=80' },
-  { label: 'Sanji (Ifrit)', url: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&auto=format&fit=crop&q=80' },
+  { label: 'Luffy (Straw Hat)', url: '/manga/characters/luffy.jpg' },
+  { label: 'Zoro (King of Hell)', url: '/manga/characters/zoro.jpg' },
+  { label: 'Shanks (Red Hair)', url: '/manga/characters/shanks.jpg' },
+  { label: 'Whitebeard (Quake)', url: '/manga/characters/whitebeard.jpg' },
+  { label: 'Law (Surgeon of Death)', url: '/manga/characters/law.jpg' },
+  { label: 'Ace (Fire Fist)', url: '/manga/characters/ace.jpg' },
+  { label: 'Kaido (Dragon Emperor)', url: '/manga/characters/kaido.jpg' },
+  { label: 'Sanji (Black Leg)', url: '/manga/characters/sanji.jpg' },
 ];
 
 export default function WantedPosterGenerator() {

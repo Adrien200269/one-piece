@@ -59,7 +59,7 @@ export const QUIZ_RESULTS = {
     title: 'The Warrior of Liberation (解放の戦士)',
     description: 'You possess the will of Joy Boy! You fight with ridiculous joy, rubbery cartoon physics, and boundless freedom. As long as you hear the Drums of Liberation, nobody in the world can chain you down!',
     sfx: 'ドンドットット!! (DODON-TOT-TO!)',
-    mangaArt: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&auto=format&fit=crop&q=80',
+    mangaArt: '/manga/fruits/gomu-gomu.png',
     kanji: '太陽神'
   },
   ope: {
@@ -68,7 +68,7 @@ export const QUIZ_RESULTS = {
     title: 'The Mastermind Surgeon (死の外科医)',
     description: 'You are calculating, intensely loyal, and an unmatched strategist. Within your ROOM, you are absolute sovereign: slicing space, teleporting allies, and piercing hearts with surgical mastery.',
     sfx: 'シャンブルズ!! (SHAMBLES!)',
-    mangaArt: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80',
+    mangaArt: '/manga/fruits/ope-ope.png',
     kanji: '執刀'
   },
   gura: {
@@ -77,7 +77,7 @@ export const QUIZ_RESULTS = {
     title: 'The Earth-Shattering Patriarch (大海賊)',
     description: 'Family and honor come above everything. You wield the power to shake oceans and break atmospheric boundaries. Anyone who threatens your crew faces an island-splitting shockwave.',
     sfx: 'グララララ!! (GURARARA!)',
-    mangaArt: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80',
+    mangaArt: '/manga/characters/whitebeard.jpg',
     kanji: '震動'
   },
   mera: {
@@ -86,7 +86,7 @@ export const QUIZ_RESULTS = {
     title: 'The Blazing Flame Fist (火拳)',
     description: 'Fierce, passionate, and burning with loyalty. Your fire warms the cold nights of the Grand Line and incinerates fleets that dare oppress your brothers.',
     sfx: 'ヒケンッ!! (FIRE FIST!)',
-    mangaArt: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=80',
+    mangaArt: '/manga/fruits/mera-mera.jpg',
     kanji: '火拳'
   },
   bara: {
@@ -95,7 +95,7 @@ export const QUIZ_RESULTS = {
     title: 'The Emperor of Fortune (千両道化)',
     description: 'Slash-proof, charismatic, and destined for greatness despite yourself! Through sheer comedic destiny and flamboyant survival, you’ve ascended to Emperor of the Sea!',
     sfx: 'ハデにドーン!! (FLASHY DON!)',
-    mangaArt: 'https://images.unsplash.com/photo-1563089145-599997674d42?w=600&auto=format&fit=crop&q=80',
+    mangaArt: '/manga/characters/buggy.jpg',
     kanji: '道化'
   }
 };

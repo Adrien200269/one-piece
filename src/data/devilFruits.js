@@ -15,7 +15,7 @@ export const DEVIL_FRUITS = [
     },
     weakness: 'Standard sea water, sea-prism stone, extreme stamina fatigue.',
     dangerLevel: 'Cataclysmic (World Government Emergency)',
-    mangaArt: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&auto=format&fit=crop&q=80',
+    mangaArt: '/manga/fruits/gomu-gomu.png',
     kanjiTag: '神'
   },
   {
@@ -34,7 +34,7 @@ export const DEVIL_FRUITS = [
     },
     weakness: 'Heavy stamina exhaustion, requires vast surgical expertise.',
     dangerLevel: 'Supreme (Grants Perennial Youth Surgery)',
-    mangaArt: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80',
+    mangaArt: '/manga/fruits/ope-ope.png',
     kanjiTag: '術'
   },
   {
@@ -53,7 +53,7 @@ export const DEVIL_FRUITS = [
     },
     weakness: 'Massive collateral destruction that can sink allied ships.',
     dangerLevel: 'World-Destroying Power',
-    mangaArt: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80',
+    mangaArt: '/manga/characters/whitebeard.jpg',
     kanjiTag: '震'
   },
   {
@@ -72,7 +72,7 @@ export const DEVIL_FRUITS = [
     },
     weakness: 'Cannot disperse body; user absorbs double damage and pain from physical blows.',
     dangerLevel: 'Supreme Calamity',
-    mangaArt: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=600&auto=format&fit=crop&q=80',
+    mangaArt: '/manga/fruits/yami-yami.png',
     kanjiTag: '闇'
   },
   {
@@ -91,7 +91,7 @@ export const DEVIL_FRUITS = [
     },
     weakness: 'Advanced Conqueror’s and Ryuo Haki can bypass scales.',
     dangerLevel: 'Apex Beast',
-    mangaArt: 'https://images.unsplash.com/photo-1563089145-599997674d42?w=600&auto=format&fit=crop&q=80',
+    mangaArt: '/manga/fruits/uo-uo.jpg',
     kanjiTag: '竜'
   },
   {
@@ -110,7 +110,7 @@ export const DEVIL_FRUITS = [
     },
     weakness: 'Subordinate in temperature to Mag-Mag fruit; sea water.',
     dangerLevel: 'High Military Threat',
-    mangaArt: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=80',
+    mangaArt: '/manga/fruits/mera-mera.jpg',
     kanjiTag: '炎'
   }
 ];

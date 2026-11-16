@@ -11,6 +11,7 @@ export const SAGAS = [
     keyVillain: 'Arlong / Captain Kuro / Don Krieg / Buggy',
     highlightFights: ['Luffy vs. Arlong (Arlong Park)', 'Zoro vs. Dracule Mihawk (Baratie)', 'Luffy vs. Don Krieg'],
     synopsis: 'Luffy sets out from Windmill Village to recruit his crew: swordsman Zoro, navigator Nami, sniper Usopp, and chef Sanji, earning his first 30M Berry bounty in Loguetown.',
+    mangaPanel: '/manga/arcs/romance-dawn.jpg',
     majorArcs: [
       { name: 'Romance Dawn Arc', episodes: '1-3', filler: false },
       { name: 'Orange Town Arc', episodes: '4-8', filler: false },
@@ -35,6 +36,7 @@ export const SAGAS = [
     keyVillain: 'Crocodile (Mr. 0, Baroque Works)',
     highlightFights: ['Luffy vs. Crocodile (Tomb of Kings)', 'Zoro vs. Mr. 1 (Steel Cleaving)', 'Sanji vs. Mr. 2 Bon Clay'],
     synopsis: 'Entering the Grand Line via Reverse Mountain, the Straw Hats ally with Princess Vivi to stop a nationwide drought conspiracy orchestrated by Warlord Crocodile.',
+    mangaPanel: '/manga/arcs/arabasta.jpg',
     majorArcs: [
       { name: 'Reverse Mountain & Whisky Peak', episodes: '62-67', filler: false },
       { name: 'Little Garden Arc', episodes: '70-77', filler: false },
@@ -57,6 +59,7 @@ export const SAGAS = [
     keyVillain: 'God Enel (Goro Goro no Mi)',
     highlightFights: ['Luffy vs. God Enel (Golden Bell Strike)', 'Zoro vs. Ohm', 'Wyper vs. Enel (Reject Dial)'],
     synopsis: 'Riding the violent Knock Up Stream 10,000 meters above sea level to the White Sea, the crew battles self-proclaimed god Enel to ring the Golden Bell of Shandora.',
+    mangaPanel: '/manga/arcs/skypiea.jpg',
     majorArcs: [
       { name: 'Jaya Arc', episodes: '144-152', filler: false },
       { name: 'Skypiea Arc', episodes: '153-195', filler: false },
@@ -77,6 +80,7 @@ export const SAGAS = [
     keyVillain: 'Rob Lucci & CP9 (Cipher Pol No. 9)',
     highlightFights: ['Luffy vs. Rob Lucci (Gear 2 & 3 Jet Gatling)', 'Zoro vs. Kaku (Asura)', 'Sanji vs. Jabra (Diable Jambe)', 'Luffy vs. Usopp'],
     synopsis: 'Faced with the demise of the Going Merry and Robin’s surrender to CP9, the Straw Hats declare war on the World Government and burn the World Flag.',
+    mangaPanel: '/manga/arcs/enies-lobby.jpg',
     majorArcs: [
       { name: 'Long Ring Long Land Arc', episodes: '207-219', filler: false },
       { name: 'Water 7 Arc', episodes: '229-263', filler: false },
@@ -98,6 +102,7 @@ export const SAGAS = [
     keyVillain: 'Gecko Moria & Oars / Bartholomew Kuma',
     highlightFights: ['Nightmare Luffy vs. Oars', 'Zoro’s "Nothing Happened" vs. Kuma', 'Zoro vs. Ryuma'],
     synopsis: 'Trapped in the Florian Triangle aboard the largest ghost island ship, the crew battles Gecko Moria to recover their stolen shadows and recruits Brook.',
+    mangaPanel: '/manga/characters/brook.jpg',
     majorArcs: [
       { name: 'Thriller Bark Arc', episodes: '337-381', filler: false },
       { name: 'Spa Island Arc (Filler)', episodes: '382-384', filler: true }
@@ -117,6 +122,7 @@ export const SAGAS = [
     keyVillain: 'Admirals (Akainu, Aokiji, Kizaru) & Blackbeard',
     highlightFights: ['Whitebeard vs. Akainu', 'Luffy vs. 3 Admirals', 'Luffy & Magellan (Impel Down)', 'Kuma scattering the Straw Hats'],
     synopsis: 'After being separated at Sabaody, Luffy infiltrates the underwater prison Impel Down and storms Marineford to rescue his brother Ace in a war that shatters the world.',
+    mangaPanel: '/manga/arcs/marineford.jpg',
     majorArcs: [
       { name: 'Sabaody Archipelago Arc', episodes: '385-405', filler: false },
       { name: 'Amazon Lily Arc', episodes: '408-417', filler: false },
@@ -139,6 +145,7 @@ export const SAGAS = [
     keyVillain: 'Hody Jones (New Fish-Man Pirates)',
     highlightFights: ['Luffy vs. Hody Jones (Elephant Gatling)', 'Straw Hats vs. 100,000 Fish-Men', 'Zoro underwater vs. Hody'],
     synopsis: 'Reuniting after 2 years of training, the upgraded Straw Hats plunge 10,000 meters under the sea to protect Fish-Man Island and declare war on Big Mom.',
+    mangaPanel: '/manga/characters/jinbe.jpg',
     majorArcs: [
       { name: 'Return to Sabaody Arc', episodes: '517-522', filler: false },
       { name: 'Fish-Man Island Arc', episodes: '523-574', filler: false }
@@ -158,6 +165,7 @@ export const SAGAS = [
     keyVillain: 'Donquixote Doflamingo / Caesar Clown',
     highlightFights: ['Luffy vs. Doflamingo (Gear 4 Boundman Debut)', 'Zoro vs. Pica', 'Law vs. Doflamingo', 'Sabo claiming Mera Mera no Mi'],
     synopsis: 'Forming an alliance with Trafalgar Law at Punk Hazard, the crew infiltrates Doflamingo’s toy kingdom Dressrosa, culminating in the birth of the Straw Hat Grand Fleet.',
+    mangaPanel: '/manga/arcs/dressrosa.webp',
     majorArcs: [
       { name: 'Punk Hazard Arc', episodes: '579-625', filler: false },
       { name: 'Dressrosa Arc', episodes: '629-746', filler: false }
@@ -177,6 +185,7 @@ export const SAGAS = [
     keyVillain: 'Charlotte Linlin (Big Mom) & Charlotte Katakuri',
     highlightFights: ['Luffy vs. Katakuri (Snakeman & Future Sight)', 'Sanji vs. Luffy', 'Brook vs. Big Mom (Soul King heist)'],
     synopsis: 'A stealth rescue team travels to the territory of Yonko Big Mom to retrieve Sanji from an arranged political wedding, stealing Road Poneglyph rubbings along the way.',
+    mangaPanel: '/manga/characters/sanji.jpg',
     majorArcs: [
       { name: 'Zou Arc', episodes: '751-779', filler: false },
       { name: 'Whole Cake Island Arc', episodes: '783-877', filler: false },
@@ -197,6 +206,7 @@ export const SAGAS = [
     keyVillain: 'Kaido & Big Mom (Onigashima Alliance)',
     highlightFights: ['Luffy vs. Kaido (Gear 5 Sun God Awakening / Bajrang Gun)', 'Zoro vs. King', 'Sanji vs. Queen', 'Law & Kid vs. Big Mom'],
     synopsis: 'In the closed, samurai nation of Wano, the Ninja-Pirate-Mink-Samurai Alliance invades Onigashima in the greatest battle of the century, toppling two Emperors.',
+    mangaPanel: '/manga/arcs/wano.webp',
     majorArcs: [
       { name: 'Wano Country Act 1 & 2', episodes: '892-958', filler: false },
       { name: 'Oden Kozuki Flashback', episodes: '959-974', filler: false },
@@ -217,6 +227,7 @@ export const SAGAS = [
     keyVillain: 'Five Elders (Gorosei) & Admiral Kizaru & Rob Lucci Awakened',
     highlightFights: ['Gear 5 Luffy vs. Rob Lucci Awakened', 'Gear 5 Luffy vs. Kizaru & Saturn', 'Shanks vs. Kid (Divine Departure)', 'Garp vs. Kuzan & Blackbeard Pirates'],
     synopsis: 'The Straw Hats reach the 500-years-in-the-future island of science, meeting Dr. Vegapunk just as the World Government unleashes a Buster Call and the Five Elders descend.',
+    mangaPanel: '/manga/arcs/egghead.webp',
     majorArcs: [
       { name: 'Egghead Island Arc', episodes: '1086-1120+', filler: false }
     ],

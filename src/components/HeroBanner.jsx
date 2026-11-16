@@ -138,9 +138,9 @@ export default function HeroBanner({ setActiveTab }) {
               {/* Main Manga Panel Graphic */}
               <div className="relative border-4 border-white bg-black overflow-hidden aspect-[4/3] flex items-center justify-center">
                 <img
-                  src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=700&auto=format&fit=crop&q=80"
-                  alt="Luffy Gear 5 Manga Panel"
-                  className="w-full h-full object-cover manga-ink-img scale-105"
+                  src="/manga/characters/luffy-full.jpg"
+                  alt="Monkey D. Luffy Manga Panel"
+                  className="w-full h-full object-cover object-top manga-ink-img scale-105"
                 />
                 
                 {/* Onomatopoeia SFX Text Overlay */}

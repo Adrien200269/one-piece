@@ -26,7 +26,7 @@ const MANGA_TRAILERS = [
     chapterRef: 'Ch. 1060 – 1120+ (Future Science Island)',
     youtubeId: '0v5z5j9KzI4',
     duration: '2:15',
-    thumbnail: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&auto=format&fit=crop&q=80',
+    thumbnail: '/manga/arcs/egghead.webp',
     description: 'Dr. Vegapunk’s Island of the Future faces total annihilation as the World Government unleashes the Buster Call and the Five Elders descend.'
   },
   {
@@ -35,7 +35,7 @@ const MANGA_TRAILERS = [
     chapterRef: 'Ch. 1044: Warrior of Liberation',
     youtubeId: 'MCb13lbKpsk',
     duration: '3:40',
-    thumbnail: 'https://images.unsplash.com/photo-1563089145-599997674d42?w=600&auto=format&fit=crop&q=80',
+    thumbnail: '/manga/arcs/wano.webp',
     description: 'The Drums of Liberation echo across Onigashima! Joy Boy has returned in the climax battle against Emperor Kaido.'
   },
   {
@@ -44,7 +44,7 @@ const MANGA_TRAILERS = [
     chapterRef: 'Ch. 1055 Tie-In / Red Hair Shanks',
     youtubeId: '89JWRYEIG-s',
     duration: '1:58',
-    thumbnail: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80',
+    thumbnail: '/manga/characters/shanks.jpg',
     description: 'The world’s greatest diva Uta performs on the music island of Elegia, harboring a secret that connects her to Shanks.'
   },
   {
@@ -53,7 +53,7 @@ const MANGA_TRAILERS = [
     chapterRef: 'Ch. 550 – 580: The Paramount War',
     youtubeId: 'eLEbSgUfB8k',
     duration: '2:45',
-    thumbnail: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80',
+    thumbnail: '/manga/arcs/marineford.jpg',
     description: 'The era-shattering clash between the Whitebeard Pirates and Marine Headquarters to save Fire Fist Ace.'
   }
 ];

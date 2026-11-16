@@ -21,8 +21,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Bajrang Gun', 'Gum-Gum Red Roc', 'King Kong Gun', 'Gum-Gum Gatling'],
     famousQuote: 'If you don’t take risks, you can’t create a future! I’m going to be King of the Pirates!',
-    mangaImage: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/luffy.jpg',
+    panelCrop: '/manga/characters/dex-luffy.webp',
     stats: { power: 99, speed: 96, defense: 95, haki: 99, intellect: 70 }
   },
   {
@@ -42,8 +42,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['King of Hell: Dragon Damnation', 'Asura: Dead Man’s Game', 'Billion-fold World Trichiliocosm'],
     famousQuote: 'Scars on the back are a swordsman’s shame. When I decided to follow my dream, I had already discarded my life.',
-    mangaImage: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/zoro.jpg',
+    panelCrop: '/manga/characters/dex-zoro.webp',
     stats: { power: 96, speed: 92, defense: 97, haki: 95, intellect: 80 }
   },
   {
@@ -63,8 +63,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Zeus Breeze Tempo', 'Thunder Lance Tempo', 'Mirage Tempo'],
     famousQuote: 'What good is having what you want if you can’t share it with the friends you love?',
-    mangaImage: 'https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/nami.jpg',
+    panelCrop: '/manga/characters/dex-nami.webp',
     stats: { power: 72, speed: 82, defense: 68, haki: 50, intellect: 98 }
   },
   {
@@ -84,8 +84,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Pop Green: Firebird Star', 'Kuro Kabuto Sniping', 'Impact Dial'],
     famousQuote: 'There comes a time when a man has to stand and fight! That is when his friend’s dreams are laughed at!',
-    mangaImage: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1563089145-599997674d42?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/usopp.jpg',
+    panelCrop: '/manga/characters/dex-usopp.webp',
     stats: { power: 74, speed: 80, defense: 75, haki: 76, intellect: 94 }
   },
   {
@@ -105,8 +105,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Ifrit Jambe: Boeuf Burst', 'Diable Jambe: Flambage Shot', 'Concassé'],
     famousQuote: 'A man forgives a woman’s lies. Cooking is a gift from the gods; spices are a gift from the devil.',
-    mangaImage: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/sanji.jpg',
+    panelCrop: '/manga/characters/dex-sanji.webp',
     stats: { power: 94, speed: 98, defense: 95, haki: 92, intellect: 91 }
   },
   {
@@ -131,8 +131,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Monster Point: Palm Strike', 'Kung Fu Point', 'Brain Point: Scope'],
     famousQuote: 'I’m not a pet! Even if you praise me, it won’t make me happy, you bastard!',
-    mangaImage: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/chopper.jpg',
+    panelCrop: '/manga/characters/dex-chopper.webp',
     stats: { power: 84, speed: 78, defense: 86, haki: 40, intellect: 97 }
   },
   {
@@ -157,8 +157,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Demonio Fleur: Grand Jacuzzi Clutch', 'Gigante Fleur', 'Mil Fleur'],
     famousQuote: 'I want to live! Take me with you to the sea!',
-    mangaImage: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/robin.jpg',
+    panelCrop: '/manga/characters/dex-robin.webp',
     stats: { power: 88, speed: 82, defense: 83, haki: 75, intellect: 99 }
   },
   {
@@ -178,8 +178,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Radical Beam', 'General Cannon', 'Coup de Vent'],
     famousQuote: 'Superrrr! No matter what weapons you may hold, just being alive isn’t a crime!',
-    mangaImage: 'https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/franky.jpg',
+    panelCrop: '/manga/characters/dex-franky.webp',
     stats: { power: 90, speed: 76, defense: 94, haki: 60, intellect: 95 }
   },
   {
@@ -204,8 +204,8 @@ export const CHARACTERS = [
     status: 'Alive (Undead Skeleton)',
     signatureMoves: ['Song of Scratches: Blizzard Slice', 'Soul Solid', 'Lullaby Flurry'],
     famousQuote: 'Yo-ho-ho-ho! May I see your panties? Neither god nor devil can extinguish this soul!',
-    mangaImage: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/brook.jpg',
+    panelCrop: '/manga/characters/dex-brook.webp',
     stats: { power: 85, speed: 93, defense: 81, haki: 65, intellect: 88 }
   },
   {
@@ -225,8 +225,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Fish-Man Karate: Demon Brick Fist', 'Vagabond Drill', 'Water Shot'],
     famousQuote: 'I am a man who wants to be part of the future Pirate King’s crew! I cannot cower before a mere Yonko!',
-    mangaImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1548767797-d8c844163c4c?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/jinbe.jpg',
+    panelCrop: '/manga/characters/dex-jinbe.webp',
     stats: { power: 93, speed: 85, defense: 98, haki: 93, intellect: 92 }
   },
   {
@@ -246,8 +246,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Divine Departure (Kamusari)', 'WiFi Haki Blast', 'Gryphon Blade Dance'],
     famousQuote: 'Listen up! You can pour drinks on me, you can throw food at me... but no matter what the reason, I won’t forgive anyone who hurts my friends!',
-    mangaImage: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/shanks.jpg',
+    panelCrop: '/manga/characters/dex-shanks.webp',
     stats: { power: 99, speed: 99, defense: 94, haki: 100, intellect: 97 }
   },
   {
@@ -272,8 +272,8 @@ export const CHARACTERS = [
     status: 'Deceased (Died standing at Marineford)',
     signatureMoves: ['Island Shaking Punch', 'Air Fracture Blade', 'Murakumogiri Cleave'],
     famousQuote: 'THE ONE PIECE IS REAL! A man’s heart belongs to the sea.',
-    mangaImage: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/whitebeard.jpg',
+    panelCrop: '/manga/characters/dex-whitebeard.webp',
     stats: { power: 100, speed: 85, defense: 100, haki: 99, intellect: 94 }
   },
   {
@@ -293,8 +293,8 @@ export const CHARACTERS = [
     status: 'Deceased (Executed in Loguetown)',
     signatureMoves: ['Divine Departure (Kamusari)', 'Ace Cut', 'Conqueror’s Sky Split'],
     famousQuote: 'My treasure? Why, it’s where I left it. You’ll have to search the whole world!',
-    mangaImage: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/roger.webp',
+    panelCrop: '/manga/characters/roger.webp',
     stats: { power: 100, speed: 99, defense: 98, haki: 100, intellect: 98 }
   },
   {
@@ -319,8 +319,8 @@ export const CHARACTERS = [
     status: 'Defeated in Wano Magma Depths',
     signatureMoves: ['Flaming Dragon Torch', 'Thunder Bagua', 'Blast Breath'],
     famousQuote: 'Only Haki can transcend all! Roger conquered the world without any fruit ability!',
-    mangaImage: 'https://images.unsplash.com/photo-1563089145-599997674d42?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/kaido.jpg',
+    panelCrop: '/manga/characters/dex-kaido.webp',
     stats: { power: 100, speed: 90, defense: 100, haki: 98, intellect: 88 }
   },
   {
@@ -345,8 +345,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['K-ROOM: Puncture Wille', 'Shock Wille', 'Gamma Knife', 'Shambles'],
     famousQuote: 'The weak do not have the right to choose how they die.',
-    mangaImage: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1514933651103-005eec06c04b?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/law.jpg',
+    panelCrop: '/manga/characters/dex-law.webp',
     stats: { power: 94, speed: 93, defense: 90, haki: 92, intellect: 99 }
   },
   {
@@ -371,8 +371,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Special Muggy Bomb', 'Bara Bara Festival'],
     famousQuote: 'WE ARE GOING TO CLAIM THE ONE PIECE!',
-    mangaImage: 'https://images.unsplash.com/photo-1563089145-599997674d42?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1544717305-2782549b5136?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/buggy.jpg',
+    panelCrop: '/manga/characters/dex-buggy.webp',
     stats: { power: 65, speed: 70, defense: 85, haki: 40, intellect: 88 }
   },
   {
@@ -397,8 +397,8 @@ export const CHARACTERS = [
     status: 'Deceased (Sacrificed himself to save Luffy)',
     signatureMoves: ['Dai Enkai: Entei (Great Flame Commandment)', 'Hiken (Fire Fist)'],
     famousQuote: 'Thank you for loving me!',
-    mangaImage: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/ace.jpg',
+    panelCrop: '/manga/characters/dex-ace.webp',
     stats: { power: 92, speed: 91, defense: 84, haki: 88, intellect: 86 }
   },
   {
@@ -418,9 +418,155 @@ export const CHARACTERS = [
     status: 'Alive (MIA at Hachinosu)',
     signatureMoves: ['Galaxy Impact', 'Galaxy Divide', 'Fist of Love'],
     famousQuote: 'You young punks have the future ahead of you! Don’t you dare throw your lives away!',
-    mangaImage: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=600&auto=format&fit=crop&q=80',
-    panelCrop: 'https://images.unsplash.com/photo-1534447677768-be436bb09401?w=600&auto=format&fit=crop&q=80',
+    mangaImage: '/manga/characters/garp.jpg',
+    panelCrop: '/manga/characters/dex-garp.webp',
     stats: { power: 99, speed: 92, defense: 98, haki: 99, intellect: 89 }
+  },
+  {
+    id: 'mihawk',
+    name: 'Dracule Mihawk',
+    japaneseName: 'ジュラキュール・ミホーク',
+    epithet: 'Hawk-Eyes / Strongest Swordsman in the World',
+    crew: 'Cross Guild',
+    role: 'Chief Officer / Co-Founder',
+    bounty: 3590000000,
+    bountyFormatted: '3,590,000,000',
+    devilFruit: null,
+    haki: ['Conqueror’s (High)', 'Armament (Black Blade Yoru Mastery)', 'Observation (Supreme Hawk Vision)'],
+    origin: 'Kuraigana Island, Grand Line',
+    chapterDebut: 'Chapter 49: Storm',
+    mangaSfx: 'ザンッ!! (YORU SLASH!)',
+    status: 'Alive',
+    signatureMoves: ['Black Blade: Night Slicer', 'World Strongest Slash', 'Tsubame Gaeshi'],
+    famousQuote: 'It takes no effort to crush an insect... but I am not merciless enough to hunt a rabbit with a cannon.',
+    mangaImage: '/manga/characters/mihawk.jpg',
+    panelCrop: '/manga/characters/mihawk.jpg',
+    stats: { power: 99, speed: 97, defense: 95, haki: 99, intellect: 96 }
+  },
+  {
+    id: 'crocodile',
+    name: 'Sir Crocodile',
+    japaneseName: 'サー・クロコダイル',
+    epithet: 'King of the Desert / Former Warlord',
+    crew: 'Cross Guild',
+    role: 'Founder / Strategic Brain',
+    bounty: 1965000000,
+    bountyFormatted: '1,965,000,000',
+    devilFruit: {
+      name: 'Suna Suna no Mi (Sand-Sand Fruit)',
+      type: 'Logia',
+      awakened: true,
+      description: 'Transforms body into sand and dehydrates anything organic upon physical contact.'
+    },
+    haki: ['Armament (Advanced)', 'Observation'],
+    origin: 'Grand Line',
+    chapterDebut: 'Chapter 126: Operation Utopia',
+    mangaSfx: 'サァァァ!! (SAND STORM!)',
+    status: 'Alive',
+    signatureMoves: ['Desert Spada', 'Sables: Pesado', 'Ground Death'],
+    famousQuote: 'Dogs that run away to nurse their wounds have no right to speak of justice. This sea is a place for monsters.',
+    mangaImage: '/manga/characters/crocodile.jpg',
+    panelCrop: '/manga/characters/crocodile.jpg',
+    stats: { power: 93, speed: 90, defense: 91, haki: 91, intellect: 98 }
+  },
+  {
+    id: 'blackbeard',
+    name: 'Marshall D. Teach',
+    japaneseName: 'マーシャル・D・ティーチ',
+    epithet: 'Blackbeard',
+    crew: 'Blackbeard Pirates',
+    role: 'Admiral / Emperor of the Sea',
+    bounty: 3996000000,
+    bountyFormatted: '3,996,000,000',
+    devilFruit: {
+      name: 'Yami Yami no Mi & Gura Gura no Mi (Dual Wield)',
+      type: 'Logia & Paramecia (Atypical Anatomy)',
+      awakened: true,
+      description: 'The only person in history to wield two Devil Fruits: the absolute darkness of void and the tectonic quake power.'
+    },
+    haki: ['Conqueror’s', 'Armament (High)', 'Observation'],
+    origin: 'Grand Line',
+    chapterDebut: 'Chapter 223: I Won’t Apologize',
+    mangaSfx: 'ゼハハハ!! (ZEHAHAHA!)',
+    status: 'Alive',
+    signatureMoves: ['Black Hole', 'Liberation', 'Quake Smash', 'Kurouzu'],
+    famousQuote: 'PEOPLE’S DREAMS HAVE NO END! ZEHAHAHAHA!',
+    mangaImage: '/manga/characters/blackbeard.webp',
+    panelCrop: '/manga/characters/blackbeard.webp',
+    stats: { power: 99, speed: 86, defense: 94, haki: 96, intellect: 97 }
+  },
+  {
+    id: 'hancock',
+    name: 'Boa Hancock',
+    japaneseName: 'ボア・ハンコック',
+    epithet: 'Pirate Empress / Snake Princess',
+    crew: 'Kuja Pirates',
+    role: 'Captain / Empress of Amazon Lily',
+    bounty: 1659000000,
+    bountyFormatted: '1,659,000,000',
+    devilFruit: {
+      name: 'Mero Mero no Mi (Love-Love Fruit)',
+      type: 'Paramecia',
+      awakened: false,
+      description: 'Petrifies anyone with lustful or impure thoughts into solid stone.'
+    },
+    haki: ['Conqueror’s (Innate)', 'Armament (Advanced Kuja Technique)', 'Observation'],
+    origin: 'Amazon Lily, Calm Belt',
+    chapterDebut: 'Chapter 516: Pirate Empress',
+    mangaSfx: 'メロメロ!! (MERO MERO!)',
+    status: 'Alive',
+    signatureMoves: ['Mero Mero Mellow', 'Slave Arrow', 'Perfume Femur'],
+    famousQuote: 'Whether I kick a puppy, tear off your ears, or commit murder... the world will forgive me! Why? Because I am beautiful!',
+    mangaImage: '/manga/characters/hancock.jpg',
+    panelCrop: '/manga/characters/hancock.jpg',
+    stats: { power: 93, speed: 94, defense: 89, haki: 93, intellect: 90 }
+  },
+  {
+    id: 'doflamingo',
+    name: 'Donquixote Doflamingo',
+    japaneseName: 'ドンキホーテ・ドフラミンゴ',
+    epithet: 'Heavenly Yaksha / Joker',
+    crew: 'Donquixote Pirates',
+    role: 'Captain / Former King of Dressrosa',
+    bounty: 340000000,
+    bountyFormatted: '340,000,000 (Frozen prior to Impel Down)',
+    devilFruit: {
+      name: 'Ito Ito no Mi (String-String Fruit)',
+      type: 'Paramecia',
+      awakened: true,
+      description: 'Generates razor-sharp indestructible strings and awakens surroundings into thread waves.'
+    },
+    haki: ['Conqueror’s (Advanced)', 'Armament', 'Observation'],
+    origin: 'Mary Geoise / North Blue',
+    chapterDebut: 'Chapter 233: World’s Greatest Powers',
+    mangaSfx: 'フッフッフッ!! (FUFFUFFU!)',
+    status: 'Imprisoned in Impel Down Level 6',
+    signatureMoves: ['God Thread (16 Flashing Bullets)', 'Birdcage', 'Parasite String', 'Overheat'],
+    famousQuote: 'Pirates are evil? The Marines are righteous? Justice will prevail, you say? Whoever wins this war becomes justice!',
+    mangaImage: '/manga/characters/doflamingo.jpg',
+    panelCrop: '/manga/characters/doflamingo.jpg',
+    stats: { power: 94, speed: 93, defense: 93, haki: 92, intellect: 98 }
+  },
+  {
+    id: 'rayleigh',
+    name: 'Silvers Rayleigh',
+    japaneseName: 'シルバーズ・レイリー',
+    epithet: 'Dark King / Right Hand of the Pirate King',
+    crew: 'Roger Pirates',
+    role: 'First Mate / Master Haki Mentor',
+    bounty: 0,
+    bountyFormatted: 'Active High Bounty (Redacted)',
+    devilFruit: null,
+    haki: ['Conqueror’s (Apex Infusion)', 'Armament (Advanced Internal Destruction)', 'Observation (High Range)'],
+    origin: 'Grand Line',
+    chapterDebut: 'Chapter 500: Embers of History',
+    mangaSfx: 'キィィン!! (DARK KING HAKI!)',
+    status: 'Alive',
+    signatureMoves: ['Internal Destruction Palm', 'Conqueror’s Stun Field', 'Precision Sword Cleave'],
+    famousQuote: 'To live without doubts... that is true strength!',
+    mangaImage: '/manga/characters/rayleigh.webp',
+    panelCrop: '/manga/characters/rayleigh.webp',
+    stats: { power: 98, speed: 96, defense: 95, haki: 99, intellect: 99 }
   }
 ];
 
