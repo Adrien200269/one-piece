@@ -1,17 +1,14 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { 
-  Sparkles, 
-  HelpCircle, 
-  Users, 
-  Award, 
   RotateCcw, 
-  Flame, 
-  Check, 
-  X, 
-  ChevronRight,
-  TrendingUp,
-  Shield,
-  Trophy
+  Users, 
+  TrendingUp, 
+  Sparkles, 
+  Trophy,
+  Check,
+  X,
+  Flame,
+  ArrowRight
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 import { FRUIT_QUIZ_QUESTIONS, QUIZ_RESULTS } from '../data/quizQuestions';
@@ -24,67 +21,68 @@ import {
 } from '../utils/audio';
 
 export default function MiniGames() {
-  const [activeTab, setActiveTab] = useState('quiz'); // 'quiz', 'crew', 'bountyGame'
+  const [activeTab, setActiveTab] = useState('quiz');
 
   return (
-    <section className="py-10 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       
-      {/* Header */}
-      <div className="text-center mb-8">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#27180f] border border-[#644122] text-yellow-400 text-xs font-serif uppercase tracking-widest mb-3">
-          <Sparkles className="w-3.5 h-3.5 text-yellow-500" />
-          <span>Pirate Tavern Games & Challenges</span>
+      {/* Manga Tavern Header */}
+      <div className="border-b-4 border-white pb-6 mb-8 text-center sm:text-left flex flex-col sm:flex-row justify-between items-end gap-4">
+        <div>
+          <div className="inline-block bg-white text-black text-xs font-mono font-black uppercase px-2 py-0.5 mb-2">
+            酒場遊戯 • MANGA TAVERN CHALLENGES
+          </div>
+          <h2 className="font-['Bangers'] text-4xl sm:text-6xl text-white tracking-widest">
+            INTERACTIVE MANGA CHALLENGES
+          </h2>
+          <p className="text-xs sm:text-sm text-neutral-300 font-serif max-w-2xl mt-1">
+            Awaken your canonical Devil Fruit destiny, draft your 5B Berry armada with real manga illustrations, and duel in bounty showdowns.
+          </p>
         </div>
-        <h2 className="font-['Pirata_One'] text-4xl sm:text-5xl text-amber-300 tracking-wider">
-          GRAND LINE INTERACTIVE TAVERN
-        </h2>
-        <p className="text-sm sm:text-base text-[#bda78a] max-w-2xl mx-auto mt-2 font-serif">
-          Discover your awakened Devil Fruit, recruit your dream crew within the 5B Berry salary cap, and test your bounty knowledge in the showdown!
-        </p>
+        <div className="font-['Bangers'] text-2xl text-white tracking-wider border-2 border-white px-3 py-1 bg-black">
+          GOGOGO!! ゴゴゴ
+        </div>
       </div>
 
-      {/* Mini-Game Navigation Tabs */}
+      {/* Comic Tabs Navigation */}
       <div className="flex justify-center mb-8">
-        <div className="bg-[#170e08] p-1.5 rounded-2xl border-2 border-[#54381e] flex flex-wrap gap-2">
+        <div className="bg-black p-1.5 border-3 border-white shadow-[6px_6px_0px_#ffffff] flex flex-wrap gap-2">
           <button
             onClick={() => { playWoodenClick(); setActiveTab('quiz'); }}
-            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 transition-all ${
+            className={`px-5 py-2.5 text-xs sm:text-sm font-['Bangers'] tracking-wider border-2 transition-all ${
               activeTab === 'quiz'
-                ? 'bg-amber-600 text-stone-950 shadow-md font-bold'
-                : 'text-[#c2af92] hover:bg-[#28180e] hover:text-amber-200'
+                ? 'bg-white text-black border-white'
+                : 'text-neutral-400 border-transparent hover:text-white hover:border-neutral-600'
             }`}
           >
-            <Flame className="w-4 h-4 text-orange-400" />
-            <span>Devil Fruit Quiz</span>
+            FRUIT AWAKENING QUIZ
           </button>
 
           <button
             onClick={() => { playWoodenClick(); setActiveTab('crew'); }}
-            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 transition-all ${
+            className={`px-5 py-2.5 text-xs sm:text-sm font-['Bangers'] tracking-wider border-2 transition-all ${
               activeTab === 'crew'
-                ? 'bg-amber-600 text-stone-950 shadow-md font-bold'
-                : 'text-[#c2af92] hover:bg-[#28180e] hover:text-amber-200'
+                ? 'bg-white text-black border-white'
+                : 'text-neutral-400 border-transparent hover:text-white hover:border-neutral-600'
             }`}
           >
-            <Users className="w-4 h-4 text-amber-400" />
-            <span>5B Berry Crew Builder</span>
+            5B BERRY CREW DRAFT
           </button>
 
           <button
             onClick={() => { playWoodenClick(); setActiveTab('bountyGame'); }}
-            className={`px-4 py-2 rounded-xl text-xs sm:text-sm font-bold flex items-center gap-2 transition-all ${
+            className={`px-5 py-2.5 text-xs sm:text-sm font-['Bangers'] tracking-wider border-2 transition-all ${
               activeTab === 'bountyGame'
-                ? 'bg-amber-600 text-stone-950 shadow-md font-bold'
-                : 'text-[#c2af92] hover:bg-[#28180e] hover:text-amber-200'
+                ? 'bg-white text-black border-white'
+                : 'text-neutral-400 border-transparent hover:text-white hover:border-neutral-600'
             }`}
           >
-            <TrendingUp className="w-4 h-4 text-amber-400" />
-            <span>Bounty Higher / Lower</span>
+            BOUNTY HIGHER / LOWER
           </button>
         </div>
       </div>
 
-      {/* Mini-Game Views */}
+      {/* Mini-Games Views */}
       {activeTab === 'quiz' && <DevilFruitQuiz />}
       {activeTab === 'crew' && <DreamCrewBuilder />}
       {activeTab === 'bountyGame' && <BountyShowdownGame />}
@@ -94,11 +92,11 @@ export default function MiniGames() {
 }
 
 // ---------------------------------------------------------------------------
-// 1. Devil Fruit Personality Quiz
+// 1. Devil Fruit Personality Quiz (Pure Black & White Manga Style)
 // ---------------------------------------------------------------------------
 function DevilFruitQuiz() {
   const [currentStep, setCurrentStep] = useState(0);
-  const [scores, setScores] = useState({ nika: 0, ope: 0, gura: 0, mera: 0, pika: 0, bara: 0 });
+  const [scores, setScores] = useState({ nika: 0, ope: 0, gura: 0, mera: 0, bara: 0 });
   const [result, setResult] = useState(null);
 
   const handleAnswer = (option) => {
@@ -114,7 +112,6 @@ function DevilFruitQuiz() {
     if (currentStep + 1 < FRUIT_QUIZ_QUESTIONS.length) {
       setCurrentStep(currentStep + 1);
     } else {
-      // Calculate top winner
       let topFruit = 'nika';
       let maxScore = -1;
       Object.entries(newScores).forEach(([fruit, score]) => {
@@ -133,46 +130,54 @@ function DevilFruitQuiz() {
   const restartQuiz = () => {
     playWoodenClick();
     setCurrentStep(0);
-    setScores({ nika: 0, ope: 0, gura: 0, mera: 0, pika: 0, bara: 0 });
+    setScores({ nika: 0, ope: 0, gura: 0, mera: 0, bara: 0 });
     setResult(null);
   };
 
   if (result) {
     return (
-      <div className="max-w-2xl mx-auto p-6 sm:p-8 rounded-3xl bg-gradient-to-b from-[#24170e] to-[#120a06] border-4 border-[#6e4925] shadow-2xl text-center space-y-5">
-        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-red-950 border border-red-700 text-yellow-300 text-xs font-bold font-mono uppercase">
-          ★ FRUIT AWAKENING DESTINY CONFIRMED ★
+      <div className="max-w-2xl mx-auto p-6 sm:p-8 bg-black border-4 border-white shadow-[10px_10px_0px_#ffffff] text-center space-y-5">
+        <div className="inline-block bg-white text-black font-mono text-xs font-black uppercase px-3 py-1">
+          ★ AWAKENING DESTINY CONFIRMED • DON!! ★
         </div>
 
-        <div className="w-28 h-28 mx-auto rounded-full bg-amber-500/20 border-4 border-amber-400 flex items-center justify-center text-6xl shadow-[0_0_40px_rgba(234,179,8,0.4)]">
-          {result.avatar}
-        </div>
-
-        <div>
-          <span className="text-xs font-mono text-amber-400 uppercase font-bold">{result.japanese}</span>
-          <h3 className="font-['Pirata_One'] text-4xl sm:text-5xl text-amber-300 mt-1">
-            {result.fruitName}
-          </h3>
-          <div className="text-base font-serif font-bold text-red-400 mt-1">
-            Title: {result.title}
+        {/* Real Manga Artwork Image */}
+        <div className="w-48 h-32 mx-auto border-3 border-white bg-black overflow-hidden relative">
+          <img
+            src={result.mangaArt}
+            alt={result.fruitName}
+            className="w-full h-full object-cover manga-ink-img"
+          />
+          <div className="absolute top-1 right-2 font-['Bangers'] text-2xl text-white manga-sfx">
+            {result.kanji}
           </div>
         </div>
 
-        <div className="p-4 rounded-2xl bg-[#170e08] border border-[#482f18] text-xs sm:text-sm text-[#cebc9f] font-serif leading-relaxed">
+        <div>
+          <span className="text-xs font-mono text-neutral-400 uppercase">{result.japanese}</span>
+          <h3 className="font-['Bangers'] text-4xl sm:text-5xl text-white mt-1 tracking-widest">
+            {result.fruitName}
+          </h3>
+          <div className="font-mono text-sm font-bold text-white mt-1">
+            TITLE: {result.title}
+          </div>
+        </div>
+
+        <div className="p-4 border-2 border-white bg-neutral-950 text-xs sm:text-sm text-neutral-200 font-serif leading-relaxed">
           {result.description}
         </div>
 
-        <div className="p-3 rounded-xl bg-[#28180d] border border-[#50331a] flex items-center justify-between text-xs font-serif">
-          <span className="text-[#a48e75] uppercase font-bold">Innate Haki Aura:</span>
-          <span className="font-bold text-amber-300">{result.aura}</span>
+        <div className="p-3 bg-white text-black font-mono text-xs flex items-center justify-between font-black">
+          <span>MANGA ONOMATOPOEIA SFX:</span>
+          <span className="font-['Bangers'] text-lg">{result.sfx}</span>
         </div>
 
         <button
           onClick={restartQuiz}
-          className="px-6 py-3 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-500 text-stone-950 font-bold font-serif text-sm shadow hover:brightness-110 flex items-center justify-center gap-2 mx-auto"
+          className="px-6 py-3 bg-white text-black font-['Bangers'] text-xl tracking-wider border-2 border-black hover:bg-neutral-200 flex items-center justify-center gap-2 mx-auto"
         >
-          <RotateCcw className="w-4 h-4" />
-          <span>Retake Awakening Trial</span>
+          <RotateCcw className="w-5 h-5" />
+          <span>RETAKE MANGA TRIAL</span>
         </button>
       </div>
     );
@@ -181,21 +186,20 @@ function DevilFruitQuiz() {
   const q = FRUIT_QUIZ_QUESTIONS[currentStep];
 
   return (
-    <div className="max-w-2xl mx-auto p-6 sm:p-8 rounded-3xl bg-[#1a110a] border-2 border-[#57391e] shadow-2xl">
-      {/* Progress */}
-      <div className="flex items-center justify-between text-xs font-mono text-[#a28e75] mb-4">
+    <div className="max-w-2xl mx-auto p-6 sm:p-8 bg-black border-4 border-white shadow-[8px_8px_0px_#ffffff]">
+      <div className="flex items-center justify-between text-xs font-mono text-neutral-400 mb-4">
         <span>TRIAL QUESTION {currentStep + 1} OF {FRUIT_QUIZ_QUESTIONS.length}</span>
         <span>{Math.round(((currentStep + 1) / FRUIT_QUIZ_QUESTIONS.length) * 100)}% COMPLETE</span>
       </div>
 
-      <div className="w-full h-2 bg-[#25170e] rounded-full overflow-hidden border border-[#442c17] mb-6">
+      <div className="w-full h-2 bg-neutral-900 border border-white mb-6">
         <div 
-          className="h-full bg-gradient-to-r from-amber-600 to-yellow-400 transition-all duration-300"
+          className="h-full bg-white transition-all duration-300"
           style={{ width: `${((currentStep + 1) / FRUIT_QUIZ_QUESTIONS.length) * 100}%` }}
         />
       </div>
 
-      <h3 className="font-serif text-lg sm:text-xl font-bold text-amber-200 mb-6 leading-relaxed">
+      <h3 className="font-serif text-base sm:text-lg font-bold text-white mb-6 leading-relaxed">
         {q.question}
       </h3>
 
@@ -204,9 +208,9 @@ function DevilFruitQuiz() {
           <button
             key={i}
             onClick={() => handleAnswer(opt)}
-            className="w-full text-left p-4 rounded-xl bg-[#23160e] hover:bg-[#342013] border border-[#4f341c] hover:border-amber-400/80 text-xs sm:text-sm text-[#e4d4ba] font-serif transition-all duration-200 hover:translate-x-1 flex items-start gap-3 group"
+            className="w-full text-left p-4 bg-neutral-950 hover:bg-white hover:text-black border-2 border-neutral-700 hover:border-white text-xs sm:text-sm text-neutral-200 font-serif transition-all flex items-start gap-3 group"
           >
-            <span className="w-6 h-6 rounded-full bg-[#170e08] border border-[#523720] text-amber-400 font-mono text-xs flex items-center justify-center shrink-0 mt-0.5 group-hover:border-amber-400">
+            <span className="w-6 h-6 border border-white bg-black text-white font-mono text-xs flex items-center justify-center shrink-0 group-hover:bg-black group-hover:text-white">
               {String.fromCharCode(65 + i)}
             </span>
             <span className="flex-1 leading-relaxed">{opt.text}</span>
@@ -218,10 +222,10 @@ function DevilFruitQuiz() {
 }
 
 // ---------------------------------------------------------------------------
-// 2. 5-Billion Berry Dream Crew Builder
+// 2. 5-Billion Berry Dream Crew Builder (Manga Portraits)
 // ---------------------------------------------------------------------------
 function DreamCrewBuilder() {
-  const SALARY_CAP = 5000000000; // 5 Billion Berries
+  const SALARY_CAP = 5000000000;
   const [crew, setCrew] = useState([]);
 
   const totalSpent = crew.reduce((sum, c) => sum + c.bounty, 0);
@@ -230,7 +234,7 @@ function DreamCrewBuilder() {
   const addCrewMember = (char) => {
     if (crew.some((c) => c.id === char.id)) return;
     if (crew.length >= 5) {
-      alert("Crew limit reached! Maximum 5 members allowed in your Armada.");
+      alert("Crew full! Maximum 5 members allowed in your Manga Armada.");
       return;
     }
     if (char.bounty > remainingBudget) {
@@ -253,39 +257,38 @@ function DreamCrewBuilder() {
 
   const finalizeCrew = () => {
     if (crew.length < 3) {
-      alert("Recruit at least 3 members to launch your pirate armada!");
+      alert("Recruit at least 3 pirates to launch your armada!");
       return;
     }
     playCannonBlast();
-    confetti({ particleCount: 100, spread: 70, origin: { y: 0.6 } });
+    confetti({ particleCount: 120, spread: 80, origin: { y: 0.6 } });
   };
 
   const totalPower = crew.reduce((sum, c) => sum + (c.stats?.power || 70), 0);
-  const avgHaki = crew.length > 0 ? Math.round(crew.reduce((sum, c) => sum + (c.stats?.haki || 50), 0) / crew.length) : 0;
 
   return (
     <div className="space-y-8">
-      {/* Budget & Stats Dashboard */}
-      <div className="p-6 rounded-3xl bg-[#1b110a] border-2 border-[#5e3e20] shadow-xl">
+      {/* Dashboard */}
+      <div className="p-6 bg-black border-4 border-white shadow-[8px_8px_0px_#ffffff]">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 items-center">
           
-          <div className="p-3 rounded-xl bg-[#24160d] border border-[#482d16]">
-            <span className="text-[10px] text-[#937e65] uppercase font-mono font-bold">Crew Slots</span>
-            <div className="text-2xl font-bold font-mono text-amber-300 mt-0.5">
-              {crew.length} / 5 Recruits
+          <div className="p-3 border-2 border-white bg-neutral-950 font-mono">
+            <span className="text-[10px] text-neutral-400 uppercase font-bold">Crew Roster</span>
+            <div className="text-2xl font-black text-white mt-0.5">
+              {crew.length} / 5 MEMBERS
             </div>
           </div>
 
-          <div className="p-3 rounded-xl bg-[#24160d] border border-[#482d16]">
-            <span className="text-[10px] text-[#937e65] uppercase font-mono font-bold">Remaining Berry Cap</span>
-            <div className={`text-xl font-bold font-mono mt-0.5 ${remainingBudget < 500000000 ? 'text-red-400' : 'text-emerald-400'}`}>
+          <div className="p-3 border-2 border-white bg-neutral-950 font-mono">
+            <span className="text-[10px] text-neutral-400 uppercase font-bold">Remaining Berries</span>
+            <div className="text-xl font-black text-white mt-0.5 truncate">
               ฿ {remainingBudget.toLocaleString()}
             </div>
           </div>
 
-          <div className="p-3 rounded-xl bg-[#24160d] border border-[#482d16]">
-            <span className="text-[10px] text-[#937e65] uppercase font-mono font-bold">Armada Attack Rating</span>
-            <div className="text-xl font-bold font-mono text-amber-300 mt-0.5">
+          <div className="p-3 border-2 border-white bg-neutral-950 font-mono">
+            <span className="text-[10px] text-neutral-400 uppercase font-bold">Armada Attack</span>
+            <div className="text-xl font-black text-white mt-0.5">
               {totalPower} PTS
             </div>
           </div>
@@ -294,25 +297,25 @@ function DreamCrewBuilder() {
             <button
               onClick={finalizeCrew}
               disabled={crew.length < 3}
-              className="flex-1 py-3 px-3 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-500 text-stone-950 font-bold font-serif text-xs sm:text-sm hover:brightness-110 disabled:opacity-40 transition-all shadow"
+              className="flex-1 py-3 px-3 bg-white text-black font-['Bangers'] text-lg tracking-wider border-2 border-black hover:bg-neutral-200 disabled:opacity-40 transition-all shadow"
             >
-              Set Sail! 🏴‍☠️
+              LAUNCH ARMADA!
             </button>
             <button
               onClick={clearCrew}
-              className="p-3 rounded-xl bg-[#28180e] hover:bg-[#382214] text-stone-400 hover:text-white border border-[#4c311a]"
+              className="p-3 border-2 border-white bg-neutral-950 hover:bg-neutral-800 text-white"
               title="Reset Crew"
             >
-              <RotateCcw className="w-4 h-4" />
+              <RotateCcw className="w-5 h-5" />
             </button>
           </div>
 
         </div>
 
-        {/* Selected Crew Roster Slots */}
-        <div className="mt-6 pt-6 border-t border-[#3c2514]">
-          <div className="text-xs uppercase font-mono font-bold text-[#9e896f] mb-3">
-            Current Fleet Roster ({crew.length} Pirates):
+        {/* 5 Roster Slots */}
+        <div className="mt-6 pt-6 border-t-2 border-white">
+          <div className="text-xs font-mono font-black uppercase text-neutral-400 mb-3">
+            YOUR RECRUITED PIRATES ({crew.length} OF 5):
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-5 gap-3">
             {[0, 1, 2, 3, 4].map((slotIndex) => {
@@ -320,33 +323,39 @@ function DreamCrewBuilder() {
               return (
                 <div
                   key={slotIndex}
-                  className={`aspect-square rounded-2xl border-2 flex flex-col items-center justify-center p-3 relative text-center ${
+                  className={`aspect-square border-3 flex flex-col items-center justify-between p-2 relative overflow-hidden ${
                     member
-                      ? 'bg-[#29180e] border-amber-500 shadow-md'
-                      : 'bg-[#150c06] border-dashed border-[#442b17]'
+                      ? 'border-white bg-neutral-950 shadow-[4px_4px_0px_#ffffff]'
+                      : 'border-dashed border-neutral-700 bg-neutral-950'
                   }`}
                 >
                   {member ? (
                     <>
                       <button
                         onClick={() => removeCrewMember(member.id)}
-                        className="absolute top-1.5 right-1.5 w-5 h-5 rounded-full bg-red-900 text-white text-[10px] flex items-center justify-center hover:bg-red-700"
-                        title="Dismiss Member"
+                        className="absolute top-1 right-1 w-5 h-5 bg-white text-black font-mono font-black text-[10px] flex items-center justify-center hover:bg-neutral-300 z-10"
+                        title="Dismiss"
                       >
                         ✕
                       </button>
-                      <div className="text-3xl mb-1">{member.avatar}</div>
-                      <div className="font-serif font-bold text-xs text-amber-200 truncate w-full">
+                      <div className="w-full h-16 border border-white overflow-hidden bg-black">
+                        <img
+                          src={member.mangaImage}
+                          alt={member.name}
+                          className="w-full h-full object-cover manga-ink-img"
+                        />
+                      </div>
+                      <div className="font-['Bangers'] text-xs text-white truncate w-full text-center mt-1">
                         {member.name}
                       </div>
-                      <div className="text-[10px] font-mono text-amber-400 mt-0.5">
+                      <div className="text-[10px] font-mono text-neutral-400 font-bold">
                         ฿{member.bountyFormatted}
                       </div>
                     </>
                   ) : (
-                    <div className="text-[#6d563e] text-xs font-mono">
-                      <span>Slot #{slotIndex + 1}</span>
-                      <div className="text-[10px] mt-1 text-[#54402c]">Empty</div>
+                    <div className="flex-1 flex flex-col items-center justify-center text-neutral-600 font-mono text-xs">
+                      <span>SLOT #{slotIndex + 1}</span>
+                      <span className="text-[10px] mt-0.5">EMPTY</span>
                     </div>
                   )}
                 </div>
@@ -356,10 +365,10 @@ function DreamCrewBuilder() {
         </div>
       </div>
 
-      {/* Available Pirates to Recruit */}
+      {/* Available Pirates Grid */}
       <div>
-        <h4 className="font-['Pirata_One'] text-3xl text-amber-300 mb-4">
-          Pirates Available for Recruitment:
+        <h4 className="font-['Bangers'] text-3xl text-white tracking-widest mb-4">
+          AVAILABLE PIRATES FOR MANGA DRAFT:
         </h4>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
           {CHARACTERS.map((char) => {
@@ -369,32 +378,38 @@ function DreamCrewBuilder() {
             return (
               <div
                 key={char.id}
-                className={`p-3.5 rounded-xl border flex items-center justify-between gap-3 ${
+                className={`p-3 border-2 flex items-center justify-between gap-3 ${
                   isRecruited
-                    ? 'bg-amber-950/40 border-amber-500 opacity-60'
-                    : 'bg-[#1a110a] border-[#442c17] hover:border-[#6b4725]'
+                    ? 'border-neutral-700 bg-neutral-950 opacity-40'
+                    : 'border-white bg-black hover:border-neutral-300'
                 }`}
               >
                 <div className="flex items-center gap-2.5 truncate">
-                  <div className="text-2xl shrink-0">{char.avatar}</div>
-                  <div className="truncate">
-                    <div className="font-serif font-bold text-xs text-amber-200 truncate">{char.name}</div>
-                    <div className="text-[10px] font-mono text-amber-400">฿{char.bountyFormatted}</div>
+                  <div className="w-10 h-10 border border-white shrink-0 overflow-hidden bg-black">
+                    <img
+                      src={char.mangaImage}
+                      alt={char.name}
+                      className="w-full h-full object-cover manga-ink-img"
+                    />
+                  </div>
+                  <div className="truncate font-mono">
+                    <div className="font-bold text-xs text-white truncate">{char.name}</div>
+                    <div className="text-[10px] text-neutral-400 font-bold">฿{char.bountyFormatted}</div>
                   </div>
                 </div>
 
                 <button
                   onClick={() => addCrewMember(char)}
                   disabled={isRecruited || !canAfford || crew.length >= 5}
-                  className={`px-3 py-1.5 rounded-lg text-xs font-bold shrink-0 transition-colors ${
+                  className={`px-3 py-1.5 text-xs font-mono font-black uppercase shrink-0 transition-colors ${
                     isRecruited
-                      ? 'bg-stone-800 text-stone-500 cursor-not-allowed'
+                      ? 'bg-neutral-800 text-neutral-500'
                       : !canAfford
-                      ? 'bg-red-950 text-red-400 border border-red-900 cursor-not-allowed'
-                      : 'bg-amber-600 hover:bg-amber-500 text-stone-950'
+                      ? 'border border-neutral-700 text-neutral-500'
+                      : 'bg-white text-black hover:bg-neutral-200'
                   }`}
                 >
-                  {isRecruited ? 'Recruited' : !canAfford ? 'Too Pricey' : 'Recruit'}
+                  {isRecruited ? 'DRAFTED' : !canAfford ? 'OVER CAP' : 'DRAFT'}
                 </button>
               </div>
             );
@@ -406,7 +421,7 @@ function DreamCrewBuilder() {
 }
 
 // ---------------------------------------------------------------------------
-// 3. Higher / Lower Bounty Showdown
+// 3. Bounty Higher / Lower Showdown
 // ---------------------------------------------------------------------------
 function BountyShowdownGame() {
   const [streak, setStreak] = useState(0);
@@ -468,75 +483,81 @@ function BountyShowdownGame() {
   return (
     <div className="max-w-3xl mx-auto space-y-6">
       
-      {/* Score bar */}
-      <div className="flex items-center justify-between p-4 rounded-2xl bg-[#1b110a] border border-[#52371e]">
-        <div className="flex items-center gap-2">
-          <Trophy className="w-5 h-5 text-amber-400" />
-          <span className="text-xs font-mono text-[#a59178] uppercase font-bold">Current Bounty Streak:</span>
-          <span className="text-lg font-mono font-bold text-amber-300">{streak}</span>
+      {/* Score Header */}
+      <div className="flex items-center justify-between p-4 bg-black border-3 border-white shadow-[4px_4px_0px_#ffffff] font-mono">
+        <div>
+          <span className="text-xs uppercase text-neutral-400">CURRENT STREAK: </span>
+          <span className="text-lg font-black text-white">{streak}</span>
         </div>
         <div>
-          <span className="text-xs font-mono text-[#a59178] uppercase font-bold mr-2">High Score:</span>
-          <span className="text-lg font-mono font-bold text-yellow-400">{bestStreak}</span>
+          <span className="text-xs uppercase text-neutral-400">BEST STREAK: </span>
+          <span className="text-lg font-black text-white">{bestStreak}</span>
         </div>
       </div>
 
-      {/* Showdown Arena */}
+      {/* Duel Arena */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6 relative">
         
-        {/* Pirate A (Known Bounty) */}
-        <div className="wanted-paper rounded-2xl p-6 text-center text-[#2a1708] flex flex-col justify-between aspect-[3/4]">
+        {/* Pirate A */}
+        <div className="manga-box-paper p-5 text-center flex flex-col justify-between aspect-[3/4]">
           <div>
-            <div className="font-['Pirata_One'] text-3xl">WANTED</div>
-            <div className="text-6xl my-4">{pirateA.avatar}</div>
-            <div className="font-['Pirata_One'] text-3xl leading-tight">{pirateA.name}</div>
-            <div className="text-xs font-serif font-bold text-[#6a4c2f] mt-1">{pirateA.crew}</div>
+            <div className="font-['Bangers'] text-2xl border-b-2 border-black pb-1">WANTED NOTICE</div>
+            <div className="aspect-[4/3] border-2 border-black my-3 overflow-hidden bg-black">
+              <img
+                src={pirateA.mangaImage}
+                alt={pirateA.name}
+                className="w-full h-full object-cover manga-ink-img"
+              />
+            </div>
+            <div className="font-['Bangers'] text-2xl leading-tight">{pirateA.name}</div>
+            <div className="font-mono text-xs text-neutral-700">{pirateA.crew}</div>
           </div>
 
-          <div className="bg-[#dfcc9e] border-2 border-[#694827] rounded-xl p-3 mt-4">
-            <div className="text-[10px] uppercase font-mono font-bold text-[#5c3e21]">KNOWN REWARD</div>
-            <div className="font-mono text-2xl font-black text-[#2e1503]">
-              ฿ {pirateA.bountyFormatted}
-            </div>
+          <div className="bg-black text-white p-3 font-mono border-2 border-black mt-2">
+            <div className="text-[9px] text-neutral-400">KNOWN BOUNTY</div>
+            <div className="font-['Bangers'] text-2xl">฿ {pirateA.bountyFormatted}</div>
           </div>
         </div>
 
-        {/* VS Emblem in middle for desktop */}
-        <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 rounded-full bg-red-700 border-2 border-yellow-400 text-yellow-300 font-bold font-mono items-center justify-center shadow-2xl">
+        {/* VS Stamp */}
+        <div className="hidden md:flex absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-10 w-12 h-12 bg-white text-black border-3 border-black font-['Bangers'] text-xl items-center justify-center shadow-[4px_4px_0px_#000000]">
           VS
         </div>
 
-        {/* Pirate B (Guess Bounty) */}
-        <div className="wanted-paper rounded-2xl p-6 text-center text-[#2a1708] flex flex-col justify-between aspect-[3/4]">
+        {/* Pirate B */}
+        <div className="manga-box-paper p-5 text-center flex flex-col justify-between aspect-[3/4]">
           <div>
-            <div className="font-['Pirata_One'] text-3xl">WANTED</div>
-            <div className="text-6xl my-4">{pirateB.avatar}</div>
-            <div className="font-['Pirata_One'] text-3xl leading-tight">{pirateB.name}</div>
-            <div className="text-xs font-serif font-bold text-[#6a4c2f] mt-1">{pirateB.crew}</div>
+            <div className="font-['Bangers'] text-2xl border-b-2 border-black pb-1">WANTED NOTICE</div>
+            <div className="aspect-[4/3] border-2 border-black my-3 overflow-hidden bg-black">
+              <img
+                src={pirateB.mangaImage}
+                alt={pirateB.name}
+                className="w-full h-full object-cover manga-ink-img"
+              />
+            </div>
+            <div className="font-['Bangers'] text-2xl leading-tight">{pirateB.name}</div>
+            <div className="font-mono text-xs text-neutral-700">{pirateB.crew}</div>
           </div>
 
           <div>
-            <div className="bg-[#dfcc9e] border-2 border-[#694827] rounded-xl p-3 mb-3">
-              <div className="text-[10px] uppercase font-mono font-bold text-[#5c3e21]">
-                {revealB ? 'ACTUAL REWARD' : 'MYSTERY BOUNTY'}
-              </div>
-              <div className="font-mono text-2xl font-black text-[#2e1503]">
+            <div className="bg-black text-white p-3 font-mono border-2 border-black mb-3">
+              <div className="text-[9px] text-neutral-400">{revealB ? 'ACTUAL REWARD' : 'MYSTERY REWARD'}</div>
+              <div className="font-['Bangers'] text-2xl">
                 {revealB ? `฿ ${pirateB.bountyFormatted}` : '฿ ???,???,???'}
               </div>
             </div>
 
-            {/* Action buttons */}
             {!gameOver && !revealB ? (
               <div className="grid grid-cols-2 gap-2">
                 <button
                   onClick={() => handleGuess(true)}
-                  className="py-3 rounded-xl bg-emerald-700 hover:bg-emerald-600 text-white font-bold text-xs uppercase tracking-wider shadow"
+                  className="py-3 bg-white text-black font-['Bangers'] text-base border-2 border-black hover:bg-neutral-200"
                 >
                   ▲ HIGHER
                 </button>
                 <button
                   onClick={() => handleGuess(false)}
-                  className="py-3 rounded-xl bg-red-800 hover:bg-red-700 text-white font-bold text-xs uppercase tracking-wider shadow"
+                  className="py-3 bg-black text-white font-['Bangers'] text-base border-2 border-black hover:bg-neutral-900"
                 >
                   ▼ LOWER
                 </button>
@@ -547,23 +568,23 @@ function BountyShowdownGame() {
 
       </div>
 
-      {/* Game Over Modal / Card */}
+      {/* Game Over Notice */}
       {gameOver && (
-        <div className="p-6 rounded-2xl bg-red-950/70 border-2 border-red-600 text-center space-y-3">
-          <div className="font-['Pirata_One'] text-3xl text-red-200">
-            INCORRECT BOUNTY ASSESSMENT!
+        <div className="p-6 bg-white text-black border-4 border-black text-center space-y-3 font-mono">
+          <div className="font-['Bangers'] text-4xl text-black">
+            INCORRECT BOUNTY ASSESSMENT!! ドン!!
           </div>
-          <p className="text-xs sm:text-sm text-red-300 font-serif">
-            {pirateB.name} has a bounty of ฿{pirateB.bountyFormatted}, while {pirateA.name} is ฿{pirateA.bountyFormatted}.
+          <p className="text-xs text-neutral-700 font-serif">
+            {pirateB.name} is ฿{pirateB.bountyFormatted}, while {pirateA.name} is ฿{pirateA.bountyFormatted}.
           </p>
-          <div className="text-sm font-bold text-amber-300">
-            Final Streak: {streak} correct predictions!
+          <div className="text-base font-black">
+            Final Streak: {streak} correct calls!
           </div>
           <button
             onClick={restartGame}
-            className="px-6 py-2.5 rounded-xl bg-gradient-to-r from-amber-600 to-yellow-500 text-stone-950 font-bold font-serif text-sm shadow hover:brightness-110"
+            className="px-6 py-2.5 bg-black text-white font-['Bangers'] text-lg tracking-wider border-2 border-black hover:bg-neutral-800"
           >
-            Play Again
+            PLAY AGAIN
           </button>
         </div>
       )}

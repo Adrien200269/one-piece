@@ -1,87 +1,163 @@
 @import "tailwindcss";
 
 @theme {
-  --font-pirate: 'Pirata One', cursive;
-  --font-cinzel: 'Cinzel', serif;
   --font-bangers: 'Bangers', cursive;
-  --font-outfit: 'Outfit', sans-serif;
-  --color-pirate-gold: #d4af37;
-  --color-pirate-crimson: #9e1a1a;
-  --color-parchment: #f3edd9;
-  --color-parchment-card: #e8dcbf;
-  --color-sea-navy: #0d1726;
-  --color-dark-wood: #1e1510;
+  --font-cinzel: 'Cinzel', serif;
+  --font-marker: 'Permanent Marker', cursive;
+  --font-kanji: 'Shippori Mincho B1', serif;
+  --font-grotesk: 'Space Grotesk', sans-serif;
+  --color-manga-black: #000000;
+  --color-manga-white: #ffffff;
+  --color-manga-paper: #f6f6f6;
+  --color-manga-ink: #111111;
+  --color-manga-tone: #888888;
 }
 
-/* Wanted Poster Stylings & Textures */
-.wanted-paper {
-  background-color: #f1e4c3;
-  background-image: 
-    radial-gradient(#d3c39d 15%, transparent 16%),
-    radial-gradient(#c2b18b 15%, transparent 16%);
-  background-size: 60px 60px;
-  background-position: 0 0, 30px 30px;
-  box-shadow: 
-    inset 0 0 60px rgba(80, 50, 20, 0.4),
-    0 15px 35px rgba(0, 0, 0, 0.6),
-    0 2px 5px rgba(0, 0, 0, 0.4);
-  border: 4px solid #573a1e;
+/* Manga Halftone Screentone Texture (Dark) */
+.manga-screentone {
+  background-image: radial-gradient(#262626 1.5px, transparent 1.5px);
+  background-size: 8px 8px;
 }
 
-/* Aged Parchment */
-.parchment-bg {
-  background: linear-gradient(135deg, #f7efe1 0%, #ecdcb9 50%, #dfca9f 100%);
-  color: #2b1d0c;
+/* Manga Halftone Screentone Texture (White Paper) */
+.manga-screentone-paper {
+  background-color: #f7f7f7;
+  background-image: radial-gradient(#d1d1d1 1.5px, transparent 1.5px);
+  background-size: 8px 8px;
 }
 
-/* Wooden Ship Plank Texture */
-.wood-bg {
-  background: linear-gradient(180deg, #24160e 0%, #170d08 100%);
-  border-color: #4a3018;
+/* Action Speedlines (Linear) */
+.manga-speedlines {
+  background: repeating-linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.05) 0px,
+    rgba(255, 255, 255, 0.05) 1px,
+    transparent 1px,
+    transparent 12px
+  );
 }
 
-/* Golden Haki Glow */
-.gold-glow {
-  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+/* Radial Dramatic Focus Lines */
+.manga-focus-lines {
+  background: repeating-conic-gradient(
+    from 0deg,
+    rgba(255, 255, 255, 0.06) 0deg 4deg,
+    transparent 4deg 12deg
+  );
 }
 
-.crimson-glow {
-  box-shadow: 0 0 25px rgba(158, 26, 26, 0.45);
+/* Manga Comic Panel Framing */
+.manga-box {
+  background: #000000;
+  border: 3px solid #ffffff;
+  box-shadow: 6px 6px 0px #ffffff;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* Custom Pirate Scrollbar */
+.manga-box:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px #ffffff;
+}
+
+/* Inverted White Paper Manga Box */
+.manga-box-paper {
+  background: #ffffff;
+  color: #000000;
+  border: 3px solid #000000;
+  box-shadow: 6px 6px 0px #000000;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.manga-box-paper:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 8px 8px 0px #000000;
+}
+
+/* High Contrast Manga Ink Filter - Forces all images to look like real black & white manga drawings */
+.manga-ink-img {
+  filter: grayscale(100%) contrast(145%) brightness(92%);
+  mix-blend-mode: luminosity;
+  transition: filter 0.3s ease, transform 0.3s ease;
+}
+
+.manga-ink-img:hover {
+  filter: grayscale(100%) contrast(165%) brightness(98%);
+}
+
+/* Manga Speech Balloon */
+.manga-speech-bubble {
+  position: relative;
+  background: #ffffff;
+  color: #000000;
+  border: 3px solid #000000;
+  border-radius: 18px;
+}
+
+.manga-speech-bubble::after {
+  content: '';
+  position: absolute;
+  bottom: -14px;
+  left: 28px;
+  border-width: 14px 12px 0;
+  border-style: solid;
+  border-color: #000000 transparent;
+  display: block;
+  width: 0;
+}
+
+.manga-speech-bubble::before {
+  content: '';
+  position: absolute;
+  bottom: -9px;
+  left: 31px;
+  border-width: 10px 9px 0;
+  border-style: solid;
+  border-color: #ffffff transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+}
+
+/* Dramatic Manga SFX Typography (ドン!! / DODODO) */
+.manga-sfx {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  text-shadow: 
+    3px 3px 0 #000,
+    -1px -1px 0 #000,  
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
+
+/* Inverted White SFX */
+.manga-sfx-white {
+  font-family: 'Bangers', cursive;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #000000;
+  text-shadow: 
+    3px 3px 0 #ffffff,
+    -1px -1px 0 #ffffff,  
+    1px -1px 0 #ffffff,
+    -1px 1px 0 #ffffff,
+    1px 1px 0 #ffffff;
+}
+
+/* Custom Manga Scrollbar */
 ::-webkit-scrollbar {
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
 }
 ::-webkit-scrollbar-track {
-  background: #0f141c;
+  background: #000000;
+  border-left: 2px solid #222222;
 }
 ::-webkit-scrollbar-thumb {
-  background: #3c2a1a;
-  border: 2px solid #573e27;
-  border-radius: 4px;
+  background: #ffffff;
+  border: 3px solid #000000;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: #d4af37;
-}
-
-/* Shimmer Animation */
-@keyframes shimmer {
-  0% { transform: translateX(-100%); }
-  100% { transform: translateX(200%); }
-}
-
-.animate-shimmer {
-  animation: shimmer 2.5s infinite;
-}
-
-/* Compass Spin on Hover */
-.spin-slow {
-  animation: spin 20s linear infinite;
-}
-
-@keyframes spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+  background: #cccccc;
 }

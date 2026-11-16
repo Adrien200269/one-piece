@@ -3,19 +3,20 @@ export const DEVIL_FRUITS = [
     id: 'nika',
     name: 'Human-Human Fruit, Model: Nika',
     japaneseName: 'ヒトヒトの実 モデル“ニカ”',
-    originalName: 'Gomu Gomu no Mi (Rubber-Rubber Fruit)',
+    originalName: 'Gomu Gomu no Mi',
     type: 'Mythical Zoan',
     rarity: 'Divine / God Tier',
     currentUser: 'Monkey D. Luffy',
     formerUser: 'Joy Boy (Void Century)',
-    powers: 'Transforms the user into the Sun God Nika, granting a rubber-like body with cartoon physics, transmuting terrain into rubber, giant form, and lightning manipulation.',
+    powers: 'Transforms user into Sun God Nika with cartoon physics, transmuting terrain into rubber, giant form, and lightning manipulation.',
     awakening: {
       status: 'Awakened (Gear 5)',
-      description: 'Gives the user the ultimate peak of their physical ability and freedom to fight in any way they imagine, accompanied by the Drums of Liberation.'
+      description: 'The peak of physical freedom accompanied by the Drums of Liberation.'
     },
-    weakness: 'Standard sea water weakness, sea-prism stone (Kairoseki), stamina drain upon de-transformation.',
-    dangerLevel: 'Cataclysmic (Threat to World Government)',
-    icon: '☀️'
+    weakness: 'Standard sea water, sea-prism stone, extreme stamina fatigue.',
+    dangerLevel: 'Cataclysmic (World Government Emergency)',
+    mangaArt: 'https://images.unsplash.com/photo-1578632767115-351597cf2477?w=600&auto=format&fit=crop&q=80',
+    kanjiTag: '神'
   },
   {
     id: 'ope-ope',
@@ -23,17 +24,18 @@ export const DEVIL_FRUITS = [
     japaneseName: 'オペオペの実',
     originalName: 'Ope Ope no Mi',
     type: 'Paramecia',
-    rarity: 'Ultimate / 5 Billion Berry Bounty',
+    rarity: 'The Ultimate Devil Fruit (5B Berries)',
     currentUser: 'Trafalgar D. Water Law',
     formerUser: 'Unknown Doctor',
-    powers: 'Enables user to generate a spherical domain ("ROOM") within which they can surgically manipulate objects, swap personalities, teleport, and perform miraculous surgeries.',
+    powers: 'Generates a spherical domain (ROOM) within which the wielder can slice space, swap personalities, and perform miraculous surgeries.',
     awakening: {
       status: 'Awakened (K-ROOM / R-ROOM)',
-      description: 'Allows attaching the room directly onto weapons, bypassing armor to tear enemies from the inside (Shock Wille & Puncture Wille).'
+      description: 'Attaches the room directly to surgical blades, tearing enemies internally with Shock Wille and Puncture Wille.'
     },
-    weakness: 'Extreme stamina drain, requiring medical knowledge to utilize properly.',
-    dangerLevel: 'Supreme (Grants Perennial Youth Surgery at the cost of user’s life)',
-    icon: '💠'
+    weakness: 'Heavy stamina exhaustion, requires vast surgical expertise.',
+    dangerLevel: 'Supreme (Grants Perennial Youth Surgery)',
+    mangaArt: 'https://images.unsplash.com/photo-1507679799987-c73779587ccf?w=600&auto=format&fit=crop&q=80',
+    kanjiTag: '術'
   },
   {
     id: 'gura-gura',
@@ -44,14 +46,15 @@ export const DEVIL_FRUITS = [
     rarity: 'Strongest Paramecia',
     currentUser: 'Marshall D. Teach (Blackbeard)',
     formerUser: 'Edward Newgate (Whitebeard)',
-    powers: 'Produces devastating vibrations and shockwaves that rupture the atmosphere, generate tsunamis, and tear apart landmasses.',
+    powers: 'Creates tectonic vibrations and shockwaves that rupture the atmosphere and shatter islands.',
     awakening: {
-      status: 'Unknown / Innate Calamity',
-      description: 'Can fracture tectonic plates and vibrate the core of any physical object or medium.'
+      status: 'Innate Calamity',
+      description: 'Vibrates the atmospheric fabric and fractures ocean trenches.'
     },
-    weakness: 'Can inadvertently destroy ally ships or islands due to sheer collateral radius.',
+    weakness: 'Massive collateral destruction that can sink allied ships.',
     dangerLevel: 'World-Destroying Power',
-    icon: '🌋'
+    mangaArt: 'https://images.unsplash.com/photo-1518709268805-4e9042af9f23?w=600&auto=format&fit=crop&q=80',
+    kanjiTag: '震'
   },
   {
     id: 'yami-yami',
@@ -62,14 +65,15 @@ export const DEVIL_FRUITS = [
     rarity: 'Most Evil Logia',
     currentUser: 'Marshall D. Teach (Blackbeard)',
     formerUser: 'None recorded',
-    powers: 'Infinite gravitational void of darkness that draws in all matter and attacks. Nullifies any Devil Fruit power upon physical touch.',
+    powers: 'Infinite gravitational void of darkness that nullifies any Devil Fruit power upon physical contact.',
     awakening: {
       status: 'Dormant',
-      description: 'Spreads absolute darkness across entire islands (Black Hole).'
+      description: 'Swallows entire towns into black holes.'
     },
-    weakness: 'Cannot disperse body into darkness like normal Logia; user absorbs double pain and damage from physical blows.',
+    weakness: 'Cannot disperse body; user absorbs double damage and pain from physical blows.',
     dangerLevel: 'Supreme Calamity',
-    icon: '🌑'
+    mangaArt: 'https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=600&auto=format&fit=crop&q=80',
+    kanjiTag: '闇'
   },
   {
     id: 'uo-uo-seiryu',
@@ -77,17 +81,18 @@ export const DEVIL_FRUITS = [
     japaneseName: 'ウオウオの実 モデル“青龍”',
     originalName: 'Uo Uo no Mi, Model: Seiryu',
     type: 'Mythical Zoan',
-    rarity: 'Mythical Legend',
+    rarity: 'Mythical Beast',
     currentUser: 'Kaido (formerly)',
     formerUser: 'None recorded',
-    powers: 'Transforms user into a colossal eastern Dragon with nearly impenetrable scales, generating flame clouds, tornadoes, lightning, and mountain-evaporating Blast Breath.',
+    powers: 'Transforms user into a colossal Azure Dragon with impenetrable scales, breathing fire, wind scythes, and lifting islands with flame clouds.',
     awakening: {
-      status: 'Awakened (Kaido’s Flame Dragon Torch)',
-      description: 'Encases the entire dragon form in superheated magma-like dragon flame that incinerates anything on contact.'
+      status: 'Awakened (Flame Dragon Torch)',
+      description: 'Superheated magma dragon avatar that incinerates anything on contact.'
     },
-    weakness: 'Advanced Conqueror’s and Ryuo Haki can bypass scales; gigantic hitbox.',
+    weakness: 'Advanced Conqueror’s and Ryuo Haki can bypass scales.',
     dangerLevel: 'Apex Beast',
-    icon: '🐉'
+    mangaArt: 'https://images.unsplash.com/photo-1563089145-599997674d42?w=600&auto=format&fit=crop&q=80',
+    kanjiTag: '竜'
   },
   {
     id: 'mera-mera',
@@ -95,88 +100,17 @@ export const DEVIL_FRUITS = [
     japaneseName: 'メラメラの実',
     originalName: 'Mera Mera no Mi',
     type: 'Logia',
-    rarity: 'Rare Elemental Logia',
+    rarity: 'Elemental Logia',
     currentUser: 'Sabo',
     formerUser: 'Portgas D. Ace',
-    powers: 'Transforms body into fire, enabling heat waves, explosive fireballs, and immunity to conventional non-Haki physical attacks.',
+    powers: 'Transforms body into fire, unleashing fireballs, heat pillars, and immunity to non-Haki strikes.',
     awakening: {
       status: 'Unawakened',
-      description: 'Produces miniature sun spheres (Dai Enkai: Entei).'
+      description: 'Produces sun-like spheres of flame (Dai Enkai: Entei).'
     },
-    weakness: 'Inferior in heat to Magu Magu no Mi (Magma Fruit); water/ice counters.',
+    weakness: 'Subordinate in temperature to Mag-Mag fruit; sea water.',
     dangerLevel: 'High Military Threat',
-    icon: '🔥'
-  },
-  {
-    id: 'magu-magu',
-    name: 'Mag-Mag Fruit',
-    japaneseName: 'マグマグの実',
-    originalName: 'Magu Magu no Mi',
-    type: 'Logia',
-    rarity: 'Highest Offensive Power Logia',
-    currentUser: 'Sakazuki (Akainu)',
-    formerUser: 'None recorded',
-    powers: 'Produces boiling magma capable of melting steel, rock, and ships instantly. Possesses the highest raw offensive output among all Devil Fruits.',
-    awakening: {
-      status: 'Awakened (Permanently altered Punk Hazard climate)',
-      description: 'Permanently burns landscapes into volcanic hellscapes.'
-    },
-    weakness: 'Standard water and extreme freezing Haki attacks.',
-    dangerLevel: 'Catastrophic Destruction',
-    icon: '🌋'
-  },
-  {
-    id: 'pika-pika',
-    name: 'Glint-Glint Fruit',
-    japaneseName: 'ピカピカの実',
-    originalName: 'Pika Pika no Mi',
-    type: 'Logia',
-    rarity: 'Speed of Light Logia',
-    currentUser: 'Borsalino (Kizaru)',
-    formerUser: 'None recorded',
-    powers: 'Transforms user into light particles, allowing lightspeed travel, high-powered laser beams, and light swords (Ama no Murakumo).',
-    awakening: {
-      status: 'Unknown',
-      description: 'Light clones and light reflection prisms (Yata no Kagami).'
-    },
-    weakness: 'Reflective surfaces can dictate trajectory; susceptible to Future Sight Haki interception.',
-    dangerLevel: 'Extremely Lethal Speed',
-    icon: '⚡'
-  },
-  {
-    id: 'ito-ito',
-    name: 'String-String Fruit',
-    japaneseName: 'イトイトの実',
-    originalName: 'Ito Ito no Mi',
-    type: 'Paramecia',
-    rarity: 'High Utility Paramecia',
-    currentUser: 'Donquixote Doflamingo',
-    formerUser: 'None recorded',
-    powers: 'Generates razor-sharp strings to slice meteors, parasitize and puppet human bodies, stitch internal organs, and attach strings to clouds to fly.',
-    awakening: {
-      status: 'Awakened',
-      description: 'Transmutes entire city blocks and stone buildings into towering waves of deadly white threads.'
-    },
-    weakness: 'No clouds in sky prevents aerial mobility; defeated by Gear 4 brute force.',
-    dangerLevel: 'Nation-Toppling',
-    icon: '🕸️'
-  },
-  {
-    id: 'hana-hana',
-    name: 'Flower-Flower Fruit',
-    japaneseName: 'ハナハナの実',
-    originalName: 'Hana Hana no Mi',
-    type: 'Paramecia',
-    rarity: 'Unique Assassination Paramecia',
-    currentUser: 'Nico Robin',
-    formerUser: 'None recorded',
-    powers: 'Sprouts any number of limbs, eyes, or giant bodies from any surface or enemy body, executing spine-snapping clutches and Demonio transformations.',
-    awakening: {
-      status: 'Near-Awakened / Demon Form',
-      description: 'Manifests a colossal demon avatar with wings and black armament-like skin.'
-    },
-    weakness: 'Damage taken by sprouted limbs is reflected back onto Robin’s true body.',
-    dangerLevel: 'High Lethality',
-    icon: '🌸'
+    mangaArt: 'https://images.unsplash.com/photo-1509198397868-475647b2a1e5?w=600&auto=format&fit=crop&q=80',
+    kanjiTag: '炎'
   }
 ];

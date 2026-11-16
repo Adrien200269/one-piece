@@ -1,6 +1,6 @@
 import React from 'react';
-import { Compass, Anchor, Skull, Heart, ArrowUp } from 'lucide-react';
-import { playShipBell, playWoodenClick } from '../utils/audio';
+import { ArrowUp } from 'lucide-react';
+import { playWoodenClick } from '../utils/audio';
 
 export default function Footer({ setActiveTab }) {
   const scrollToTop = () => {
@@ -9,46 +9,46 @@ export default function Footer({ setActiveTab }) {
   };
 
   return (
-    <footer className="bg-[#0e0906] border-t-4 border-[#4f351d] text-[#a99478] py-12 px-4 sm:px-6 lg:px-8 mt-16 relative">
+    <footer className="bg-black border-t-8 border-white text-white py-12 px-4 sm:px-6 lg:px-8 mt-16 relative font-mono">
       <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
         
         {/* Brand Col */}
         <div className="space-y-3 md:col-span-1">
           <div className="flex items-center gap-2">
-            <div className="w-10 h-10 rounded-full bg-gradient-to-tr from-amber-700 to-yellow-500 flex items-center justify-center text-stone-950 font-bold border border-yellow-200">
-              <Compass className="w-6 h-6 spin-slow" />
+            <div className="w-9 h-9 border-2 border-white bg-white text-black flex items-center justify-center font-['Bangers'] text-xl font-black">
+              ドン
             </div>
-            <span className="font-['Pirata_One'] text-2xl text-amber-300">
-              GRAND LINE CHRONICLES
+            <span className="font-['Bangers'] text-2xl text-white tracking-widest">
+              ONE PIECE MANGA
             </span>
           </div>
-          <p className="text-xs font-serif leading-relaxed text-[#8f7a63]">
-            The definitive fan sanctuary celebrating 25+ years of Eiichiro Oda’s masterwork. Crafted with love for Straw Hat pirates across all four blues.
+          <p className="text-xs font-serif leading-relaxed text-neutral-400">
+            Dedicated to Eiichiro Oda’s legendary manga published in Weekly Shonen Jump since 1997. Rendered in pure black-and-white ink screentone.
           </p>
         </div>
 
         {/* Quick Nav */}
         <div>
-          <h4 className="font-['Pirata_One'] text-xl text-amber-300 mb-2">Voyage Sections</h4>
-          <ul className="text-xs space-y-1.5 font-serif">
+          <h4 className="font-['Bangers'] text-xl text-white tracking-wider mb-2">MANGA CHAPTERS</h4>
+          <ul className="text-xs space-y-2 font-mono text-neutral-300">
             <li>
-              <button onClick={() => { playWoodenClick(); setActiveTab('characters'); }} className="hover:text-amber-300">
-                ☠️ Marine Bounty Archives
+              <button onClick={() => { playWoodenClick(); setActiveTab('characters'); }} className="hover:underline text-left">
+                ▸ Character Profiles & Panels
               </button>
             </li>
             <li>
-              <button onClick={() => { playWoodenClick(); setActiveTab('fruits'); }} className="hover:text-amber-300">
-                🍇 Devil Fruit Encyclopedia
+              <button onClick={() => { playWoodenClick(); setActiveTab('fruits'); }} className="hover:underline text-left">
+                ▸ Devil Fruit SBS Encyclopedia
               </button>
             </li>
             <li>
-              <button onClick={() => { playWoodenClick(); setActiveTab('sagas'); }} className="hover:text-amber-300">
-                🗺️ 11 Sagas & Canon Guide
+              <button onClick={() => { playWoodenClick(); setActiveTab('sagas'); }} className="hover:underline text-left">
+                ▸ 11 Sagas Canon Chapter Log
               </button>
             </li>
             <li>
-              <button onClick={() => { playWoodenClick(); setActiveTab('cinema'); }} className="hover:text-amber-300">
-                🎬 Grand Line Cinema & OST
+              <button onClick={() => { playWoodenClick(); setActiveTab('cinema'); }} className="hover:underline text-left">
+                ▸ Manga Theatre & Soundboard
               </button>
             </li>
           </ul>
@@ -56,57 +56,61 @@ export default function Footer({ setActiveTab }) {
 
         {/* Interactive Features */}
         <div>
-          <h4 className="font-['Pirata_One'] text-xl text-amber-300 mb-2">Interactive Tools</h4>
-          <ul className="text-xs space-y-1.5 font-serif">
+          <h4 className="font-['Bangers'] text-xl text-white tracking-wider mb-2">MANGA FORGE</h4>
+          <ul className="text-xs space-y-2 font-mono text-neutral-300">
             <li>
-              <button onClick={() => { playWoodenClick(); setActiveTab('generator'); }} className="hover:text-amber-300">
-                📜 Custom Wanted Poster Maker
+              <button onClick={() => { playWoodenClick(); setActiveTab('generator'); }} className="hover:underline text-left">
+                ▸ Custom Manga Wanted Maker
               </button>
             </li>
             <li>
-              <button onClick={() => { playWoodenClick(); setActiveTab('games'); }} className="hover:text-amber-300">
-                🔮 Devil Fruit Personality Quiz
+              <button onClick={() => { playWoodenClick(); setActiveTab('games'); }} className="hover:underline text-left">
+                ▸ Devil Fruit Awakening Quiz
               </button>
             </li>
             <li>
-              <button onClick={() => { playWoodenClick(); setActiveTab('games'); }} className="hover:text-amber-300">
-                ⚔️ 5-Billion Berry Crew Builder
+              <button onClick={() => { playWoodenClick(); setActiveTab('games'); }} className="hover:underline text-left">
+                ▸ 5B Berry Crew Draft
               </button>
             </li>
             <li>
-              <button onClick={() => { playWoodenClick(); setActiveTab('live'); }} className="hover:text-amber-300">
-                📡 Live MyAnimeList Intelligence
+              <button onClick={() => { playWoodenClick(); setActiveTab('live'); }} className="hover:underline text-left">
+                ▸ Live Den Den Mushi Telemetry
               </button>
             </li>
           </ul>
         </div>
 
-        {/* Tribute & Back to Top */}
+        {/* To Be Continued Stamp */}
         <div className="space-y-3">
-          <h4 className="font-['Pirata_One'] text-xl text-amber-300">The Pirate's Creed</h4>
-          <p className="text-xs italic font-serif text-[#cebc9f]">
-            “Inherited Will, The Swell of the Epochs, and People’s Dreams... As long as people seek freedom, these will never be stopped.”
-          </p>
-          <div className="pt-2">
+          <div className="border-4 border-white p-4 bg-white text-black text-center shadow-[6px_6px_0px_#000000]">
+            <div className="font-['Bangers'] text-3xl tracking-widest">
+              TO BE CONTINUED...
+            </div>
+            <div className="font-['Shippori_Mincho_B1'] text-xs font-black tracking-widest mt-0.5">
+              つづく • 次号へ続く
+            </div>
+          </div>
+          
+          <div className="pt-2 text-center">
             <button
               onClick={scrollToTop}
-              className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-[#22160d] border border-[#52371e] text-amber-300 text-xs font-bold hover:bg-[#322013] transition-colors"
+              className="inline-flex items-center gap-1.5 px-3 py-1.5 bg-black border-2 border-white text-white text-xs font-bold hover:bg-white hover:text-black transition-colors"
             >
               <ArrowUp className="w-3.5 h-3.5" />
-              <span>Back to Top Mast</span>
+              <span>TOP OF CHAPTER</span>
             </button>
           </div>
         </div>
 
       </div>
 
-      <div className="max-w-7xl mx-auto mt-10 pt-6 border-t border-[#312012] flex flex-col sm:flex-row items-center justify-between text-[11px] text-[#715e4a] font-mono">
+      <div className="max-w-7xl mx-auto mt-10 pt-6 border-t border-neutral-800 flex flex-col sm:flex-row items-center justify-between text-[11px] text-neutral-500 font-mono">
         <div>
-          ONE PIECE © Eiichiro Oda / Shueisha, Toei Animation. Created for fans worldwide.
+          ONE PIECE © EIICHIRO ODA / SHUEISHA. WEEKLY SHONEN JUMP.
         </div>
-        <div className="mt-2 sm:mt-0 flex items-center gap-1">
-          <span>Set Sail on the Grand Line</span>
-          <span className="text-amber-400">⚓</span>
+        <div className="mt-2 sm:mt-0 font-['Bangers'] text-base text-white tracking-widest">
+          DON!! ドン!!
         </div>
       </div>
     </footer>

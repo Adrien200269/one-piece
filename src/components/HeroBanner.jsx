@@ -1,33 +1,31 @@
 import React, { useState, useEffect } from 'react';
 import { 
-  Compass, 
-  Flame, 
-  Award, 
-  Play, 
-  Sparkles, 
-  ShieldAlert, 
-  Skull, 
   ChevronRight,
-  Anchor,
-  Zap
+  BookOpen,
+  Sparkles,
+  Search,
+  Volume2,
+  Bookmark,
+  Zap,
+  ArrowUpRight
 } from 'lucide-react';
 import { playHakiPulse, playWoodenClick, playCannonBlast } from '../utils/audio';
 
-const QUOTES = [
-  { text: "If you don’t take risks, you can’t create a future!", author: "Monkey D. Luffy", role: "Future King of the Pirates" },
-  { text: "THE ONE PIECE IS REAL!", author: "Edward Newgate (Whitebeard)", role: "Strongest Man in the World" },
-  { text: "My treasure? Why, it’s where I left it. You’ll have to search the whole world!", author: "Gol D. Roger", role: "Pirate King" },
-  { text: "When I decided to follow my dream, I had already discarded my life.", author: "Roronoa Zoro", role: "King of Hell" },
-  { text: "I want to live! Take me with you to the sea!", author: "Nico Robin", role: "Devil Child" },
-  { text: "People’s dreams... will never die! Zehahahaha!", author: "Marshall D. Teach", role: "Blackbeard" },
+const MANGA_QUOTES = [
+  { text: "IF YOU DON’T TAKE RISKS, YOU CAN’T CREATE A FUTURE!", author: "MONKEY D. LUFFY", chapter: "CH. 1044: WARRIOR OF LIBERATION" },
+  { text: "THE ONE PIECE... IS REAL!!", author: "EDWARD NEWGATE (WHITEBEARD)", chapter: "CH. 576: THE GREAT PIRATE EDWARD NEWGATE" },
+  { text: "MY TREASURE? SEARCH THE WHOLE WORLD FOR WHERE I LEFT IT!", author: "GOL D. ROGER", chapter: "CH. 1: ROMANCE DAWN" },
+  { text: "SCARS ON THE BACK ARE A SWORDSMAN'S GREATEST SHAME.", author: "RORONOA ZORO", chapter: "CH. 51: RORONOA ZORO FALLS INTO THE SEA" },
+  { text: "I WANT TO LIVE! TAKE ME TO THE SEAS WITH YOU!!", author: "NICO ROBIN", chapter: "CH. 398: DECLARATION OF WAR" },
+  { text: "PEOPLE'S DREAMS... WILL NEVER DIE! ZEHAHAHAHA!", author: "MARSHALL D. TEACH", chapter: "CH. 225: THE DREAMS OF PIRATES" },
 ];
 
 export default function HeroBanner({ setActiveTab }) {
-  const [currentQuoteIndex, setCurrentQuoteIndex] = useState(0);
+  const [quoteIndex, setQuoteIndex] = useState(0);
 
   useEffect(() => {
     const timer = setInterval(() => {
-      setCurrentQuoteIndex((prev) => (prev + 1) % QUOTES.length);
+      setQuoteIndex((prev) => (prev + 1) % MANGA_QUOTES.length);
     }, 6000);
     return () => clearInterval(timer);
   }, []);
@@ -39,147 +37,152 @@ export default function HeroBanner({ setActiveTab }) {
   };
 
   return (
-    <div className="relative overflow-hidden pt-8 pb-16 px-4 sm:px-6 lg:px-8 border-b-4 border-[#4d3319] bg-gradient-to-b from-[#140d08] via-[#1b120b] to-[#0c0906]">
-      {/* Background Ambience & Grid */}
-      <div className="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#d4af37_1px,transparent_1px)] [background-size:24px_24px]"></div>
+    <div className="relative overflow-hidden pt-8 pb-16 px-4 sm:px-6 lg:px-8 border-b-8 border-white bg-black manga-screentone">
       
-      {/* Glowing Haki Auroras */}
-      <div className="absolute top-1/4 left-1/4 w-96 h-96 bg-amber-600/10 rounded-full blur-3xl pointer-events-none"></div>
-      <div className="absolute bottom-10 right-1/4 w-96 h-96 bg-red-600/10 rounded-full blur-3xl pointer-events-none"></div>
+      {/* Dynamic Action Speedlines Backdrop */}
+      <div className="absolute inset-0 manga-speedlines opacity-40 pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto relative z-10">
         
-        {/* Top Tag */}
-        <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-[#342013] border border-[#78512b] text-amber-300 text-xs sm:text-sm font-medium mb-6 shadow-md">
-          <Skull className="w-4 h-4 text-amber-400" />
-          <span>The Great Pirate Era • 1,120+ Episodes & Beyond</span>
-          <span className="w-1.5 h-1.5 rounded-full bg-red-500 animate-pulse"></span>
+        {/* Manga Volume & Issue Tag */}
+        <div className="flex flex-wrap items-center justify-between gap-2 border-b-2 border-white pb-3 mb-8">
+          <div className="flex items-center gap-2">
+            <span className="bg-white text-black font-['Bangers'] text-lg px-2.5 py-0.5 tracking-wider">
+              第1120話 (CH. 1120)
+            </span>
+            <span className="text-xs font-mono font-bold uppercase tracking-widest text-neutral-300">
+              WEEKLY SHONEN JUMP • DOUBLE SPREAD SPLASH
+            </span>
+          </div>
+          <div className="font-['Shippori_Mincho_B1'] text-xs font-black text-white tracking-widest">
+            尾田栄一郎 • 週刊少年ジャンプ連載
+          </div>
         </div>
 
-        {/* Main Grid Hero */}
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+        {/* Double-Page Spread Panel Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-stretch">
           
-          {/* Left Column: Heading, Quote, CTAs */}
-          <div className="lg:col-span-7 space-y-6">
-            <h1 className="font-['Pirata_One'] text-4xl sm:text-6xl xl:text-7xl leading-none text-transparent bg-clip-text bg-gradient-to-r from-amber-100 via-amber-300 to-yellow-500 drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]">
-              VOYAGE BEYOND THE GRAND LINE
-            </h1>
+          {/* Left Manga Column: Dialogue, Splash Title, CTAs */}
+          <div className="lg:col-span-7 flex flex-col justify-between space-y-6">
             
-            <p className="text-base sm:text-xl text-[#d2be9f] font-serif leading-relaxed max-w-2xl">
-              Immerse yourself in Eiichiro Oda’s legendary anime saga. Discover wanted bounties, awaken mythical devil fruits, trace every saga from East Blue to Egghead, and forge your personal pirate legacy.
-            </p>
-
-            {/* Rotating Pirate Quote Card */}
-            <div className="parchment-bg rounded-xl p-4 sm:p-5 border-2 border-[#83592e] shadow-xl relative overflow-hidden group">
-              <div className="absolute top-0 left-0 w-2 h-full bg-[#9e1a1a]"></div>
-              <div className="pl-3">
-                <p className="italic text-base sm:text-lg text-[#2a1b0d] font-serif font-bold">
-                  “{QUOTES[currentQuoteIndex].text}”
-                </p>
-                <div className="flex items-center justify-between mt-2 pt-2 border-t border-[#c5ad82]">
-                  <span className="text-xs sm:text-sm font-bold text-[#801b1b] uppercase font-mono">
-                    — {QUOTES[currentQuoteIndex].author}
-                  </span>
-                  <span className="text-[11px] text-[#634f3a] uppercase font-semibold">
-                    {QUOTES[currentQuoteIndex].role}
-                  </span>
-                </div>
+            {/* Top Comic Dialogue Balloon */}
+            <div className="manga-speech-bubble p-5 border-4 border-black max-w-xl shadow-[6px_6px_0px_#ffffff]">
+              <div className="text-[10px] font-mono font-black uppercase text-neutral-600 tracking-wider flex items-center justify-between">
+                <span>{MANGA_QUOTES[quoteIndex].author}</span>
+                <span>{MANGA_QUOTES[quoteIndex].chapter}</span>
               </div>
+              <p className="font-['Bangers'] text-2xl sm:text-3xl text-black tracking-wide leading-tight mt-1">
+                “{MANGA_QUOTES[quoteIndex].text}”
+              </p>
             </div>
 
-            {/* Action Buttons */}
-            <div className="flex flex-wrap gap-3 pt-2">
+            {/* Giant Manga Chapter Headline */}
+            <div className="space-y-3 pt-2">
+              <div className="inline-block border-2 border-white px-2.5 py-0.5 bg-neutral-900 text-xs font-mono font-bold tracking-widest text-white">
+                THE SUN GOD RISES • DRUMS OF LIBERATION
+              </div>
+              
+              <h1 className="font-['Bangers'] text-5xl sm:text-7xl xl:text-8xl leading-none text-white tracking-widest drop-shadow-[5px_5px_0px_#222222]">
+                GRAND LINE CHRONICLES!!
+              </h1>
+
+              <p className="text-sm sm:text-base text-neutral-300 font-serif leading-relaxed max-w-2xl border-l-4 border-white pl-4">
+                Enter Eiichiro Oda's masterwork in its purest form: raw monochrome ink, dramatic speech balloons, cross-hatched Wanted posters, and the legendary 1,120+ chapter journey across the four seas.
+              </p>
+            </div>
+
+            {/* Manga Action Buttons (Sharp Comic Box Shadows) */}
+            <div className="flex flex-wrap gap-3 pt-4">
               <button
                 onClick={() => handleAction('characters', playHakiPulse)}
-                className="px-5 py-3 rounded-xl bg-gradient-to-r from-amber-600 via-amber-500 to-yellow-500 text-stone-950 font-bold font-serif text-sm sm:text-base hover:brightness-110 active:scale-95 transition-all shadow-[0_0_20px_rgba(217,119,6,0.4)] flex items-center gap-2"
+                className="px-6 py-3.5 bg-white text-black font-['Bangers'] text-xl tracking-wider border-3 border-black shadow-[5px_5px_0px_#ffffff] hover:-translate-x-1 hover:-translate-y-1 hover:shadow-[7px_7px_0px_#ffffff] active:translate-x-0 active:translate-y-0 transition-all flex items-center gap-2"
               >
-                <Award className="w-5 h-5 text-stone-900" />
-                <span>Wanted Posters & Bounties</span>
-                <ChevronRight className="w-4 h-4 text-stone-900" />
+                <Bookmark className="w-5 h-5 text-black" />
+                <span>CHARACTER DOSSIERS</span>
+                <ChevronRight className="w-5 h-5 text-black" />
               </button>
 
               <button
                 onClick={() => handleAction('generator', playCannonBlast)}
-                className="px-5 py-3 rounded-xl bg-[#2a1a0f] hover:bg-[#3d2716] text-amber-200 border-2 border-[#80552b] font-serif text-sm sm:text-base font-semibold active:scale-95 transition-all flex items-center gap-2 shadow-lg"
+                className="px-5 py-3.5 bg-black text-white font-['Bangers'] text-lg tracking-wider border-3 border-white shadow-[5px_5px_0px_#ffffff] hover:bg-neutral-900 active:translate-x-0 active:translate-y-0 transition-all flex items-center gap-2"
               >
-                <Anchor className="w-5 h-5 text-amber-400" />
-                <span>Make Custom Wanted Poster</span>
+                <Search className="w-5 h-5" />
+                <span>FORGE WANTED POSTER</span>
               </button>
 
               <button
                 onClick={() => handleAction('cinema', playWoodenClick)}
-                className="px-4 py-3 rounded-xl bg-red-950/70 hover:bg-red-900/80 text-red-200 border border-red-700/80 font-serif text-sm sm:text-base font-semibold transition-all flex items-center gap-2"
+                className="px-4 py-3.5 bg-neutral-900 text-neutral-300 font-['Bangers'] text-lg tracking-wider border-2 border-neutral-600 hover:border-white hover:text-white transition-all flex items-center gap-2"
               >
-                <Play className="w-4 h-4 text-red-400 fill-red-400" />
-                <span>Arc Cinema & OST</span>
+                <span>THEATRE & SFX</span>
+                <ArrowUpRight className="w-4 h-4" />
               </button>
             </div>
+
           </div>
 
-          {/* Right Column: Hero Showcase Card (Luffy Gear 5 / Sun God Nika Spotlight) */}
+          {/* Right Manga Column: Featured Gear 5 Manga Panel */}
           <div className="lg:col-span-5">
-            <div className="relative rounded-2xl p-6 bg-gradient-to-b from-[#2a1b12] to-[#170e08] border-2 border-[#6f4b27] shadow-[0_20px_50px_rgba(0,0,0,0.9)] overflow-hidden">
+            <div className="manga-box h-full p-4 relative flex flex-col justify-between overflow-hidden bg-black">
               
-              {/* Corner Emblems */}
-              <div className="absolute top-2 left-2 text-[#4d351e] font-serif text-xs">◆ GRAND LINE REGISTRY ◆</div>
-              <div className="absolute top-2 right-2 flex items-center gap-1 bg-amber-500/20 text-amber-300 text-[11px] px-2 py-0.5 rounded border border-amber-500/30">
-                <Zap className="w-3 h-3 text-amber-400" />
-                <span>EMPEROR STATUS</span>
+              {/* Manga Panel Top Meta */}
+              <div className="flex items-center justify-between border-b-2 border-white pb-2 mb-3">
+                <span className="font-['Bangers'] text-sm tracking-widest text-white">
+                  PANEL 01: SUN GOD NIKA
+                </span>
+                <span className="font-mono text-xs font-black bg-white text-black px-2 py-0.5">
+                  DON!! ドン!!
+                </span>
               </div>
 
-              {/* Character Spotlight Preview */}
-              <div className="mt-4 text-center">
-                <div className="w-32 h-32 mx-auto rounded-full bg-gradient-to-tr from-amber-600 via-yellow-400 to-amber-200 p-1.5 shadow-[0_0_35px_rgba(234,179,8,0.4)] relative">
-                  <div className="w-full h-full rounded-full bg-[#1e130b] flex items-center justify-center text-6xl">
-                    👒
-                  </div>
-                  <div className="absolute bottom-0 right-0 bg-red-600 text-white text-[10px] font-bold px-2 py-0.5 rounded-full border border-white">
-                    GEAR 5
-                  </div>
+              {/* Main Manga Panel Graphic */}
+              <div className="relative border-4 border-white bg-black overflow-hidden aspect-[4/3] flex items-center justify-center">
+                <img
+                  src="https://images.unsplash.com/photo-1578632767115-351597cf2477?w=700&auto=format&fit=crop&q=80"
+                  alt="Luffy Gear 5 Manga Panel"
+                  className="w-full h-full object-cover manga-ink-img scale-105"
+                />
+                
+                {/* Onomatopoeia SFX Text Overlay */}
+                <div className="absolute top-3 right-3 font-['Bangers'] text-4xl sm:text-5xl text-white manga-sfx select-none tracking-widest rotate-6">
+                  ドン!!
                 </div>
+                
+                <div className="absolute bottom-2 left-2 bg-black/90 border border-white px-2.5 py-1 text-white font-mono text-xs">
+                  “DODON-TOT-TO!”
+                </div>
+              </div>
 
-                <div className="mt-4">
-                  <span className="text-xs uppercase tracking-widest text-[#ad9574] font-mono">
-                    Straw Hat Pirates Captain
-                  </span>
-                  <h3 className="font-['Pirata_One'] text-3xl text-amber-300 tracking-wider">
-                    Monkey D. Luffy
+              {/* Character Details in Comic Format */}
+              <div className="mt-4 pt-3 border-t-2 border-white space-y-2">
+                <div className="flex items-center justify-between">
+                  <h3 className="font-['Bangers'] text-3xl text-white tracking-widest">
+                    MONKEY D. LUFFY
                   </h3>
-                  <p className="text-xs text-amber-100/70 italic mt-1 font-serif">
-                    “Drums of Liberation • Sun God Nika Awakened”
-                  </p>
+                  <span className="font-mono text-xs font-black border border-white px-2 py-0.5">
+                    EMPEROR
+                  </span>
                 </div>
 
-                {/* Bounty Display Plate */}
-                <div className="mt-4 p-3 rounded-xl bg-[#130b06] border border-[#523820] flex items-center justify-between">
-                  <div className="text-left">
-                    <div className="text-[10px] text-[#8e7a61] uppercase font-bold tracking-wider">DEAD OR ALIVE</div>
-                    <div className="text-xl sm:text-2xl font-bold font-mono text-amber-400 tracking-wider flex items-center gap-1">
-                      <span>฿</span>
-                      <span>3,000,000,000</span>
-                    </div>
-                  </div>
-                  <button
-                    onClick={() => handleAction('characters', playHakiPulse)}
-                    className="text-xs bg-amber-600/80 hover:bg-amber-500 text-stone-950 font-bold px-3 py-1.5 rounded-lg transition-colors"
-                  >
-                    View File
-                  </button>
+                <div className="bg-white text-black p-2.5 border-2 border-black font-mono font-black flex items-center justify-between text-xs sm:text-sm">
+                  <span>DEAD OR ALIVE</span>
+                  <span className="font-['Bangers'] text-lg sm:text-xl tracking-wider">
+                    ฿ 3,000,000,000 -
+                  </span>
                 </div>
 
-                {/* Quick Attributes */}
-                <div className="grid grid-cols-3 gap-2 mt-4 text-center">
-                  <div className="p-2 rounded-lg bg-[#20140c] border border-[#432d18]">
-                    <div className="text-[10px] text-[#978368] uppercase">Fruit</div>
-                    <div className="text-xs font-bold text-amber-200 mt-0.5">Mythical Zoan</div>
+                <div className="grid grid-cols-3 gap-2 text-center text-xs font-mono pt-1">
+                  <div className="border border-neutral-700 p-1.5 bg-neutral-950">
+                    <div className="text-[9px] text-neutral-400">CLASS</div>
+                    <div className="font-bold text-white">MYTHICAL</div>
                   </div>
-                  <div className="p-2 rounded-lg bg-[#20140c] border border-[#432d18]">
-                    <div className="text-[10px] text-[#978368] uppercase">Conqueror's</div>
-                    <div className="text-xs font-bold text-red-400 mt-0.5">Advanced Ryuo</div>
+                  <div className="border border-neutral-700 p-1.5 bg-neutral-950">
+                    <div className="text-[9px] text-neutral-400">HAKI</div>
+                    <div className="font-bold text-white">CONQUEROR</div>
                   </div>
-                  <div className="p-2 rounded-lg bg-[#20140c] border border-[#432d18]">
-                    <div className="text-[10px] text-[#978368] uppercase">Bounty Rank</div>
-                    <div className="text-xs font-bold text-amber-400 mt-0.5">#5 Active</div>
+                  <div className="border border-neutral-700 p-1.5 bg-neutral-950">
+                    <div className="text-[9px] text-neutral-400">ORIGIN</div>
+                    <div className="font-bold text-white">EAST BLUE</div>
                   </div>
                 </div>
 
@@ -190,23 +193,23 @@ export default function HeroBanner({ setActiveTab }) {
 
         </div>
 
-        {/* Global Statistics Bar */}
-        <div className="mt-12 grid grid-cols-2 sm:grid-cols-4 gap-4 p-4 rounded-2xl bg-[#181009]/90 border border-[#543b23] shadow-lg">
-          <div className="text-center p-3 border-r border-[#382717] last:border-r-0">
-            <div className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-mono">1,120+</div>
-            <div className="text-xs text-[#a99577] uppercase tracking-wider font-semibold mt-1">Episodes Airing</div>
+        {/* Manga Stats Bar (Comic Layout) */}
+        <div className="mt-12 grid grid-cols-2 md:grid-cols-4 gap-3">
+          <div className="border-3 border-white p-4 bg-black text-center shadow-[4px_4px_0px_#ffffff]">
+            <div className="font-['Bangers'] text-4xl text-white tracking-wider">1,120+</div>
+            <div className="font-mono text-xs uppercase font-bold text-neutral-400">MANGA CHAPTERS</div>
           </div>
-          <div className="text-center p-3 border-r border-[#382717] last:border-r-0">
-            <div className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-mono">฿ 8.816B</div>
-            <div className="text-xs text-[#a99577] uppercase tracking-wider font-semibold mt-1">Straw Hat Total Bounty</div>
+          <div className="border-3 border-white p-4 bg-black text-center shadow-[4px_4px_0px_#ffffff]">
+            <div className="font-['Bangers'] text-4xl text-white tracking-wider">฿ 8.816B</div>
+            <div className="font-mono text-xs uppercase font-bold text-neutral-400">STRAW HAT CREW BOUNTY</div>
           </div>
-          <div className="text-center p-3 border-r border-[#382717] last:border-r-0">
-            <div className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-mono">11 Sagas</div>
-            <div className="text-xs text-[#a99577] uppercase tracking-wider font-semibold mt-1">Epic Story Sagas</div>
+          <div className="border-3 border-white p-4 bg-black text-center shadow-[4px_4px_0px_#ffffff]">
+            <div className="font-['Bangers'] text-4xl text-white tracking-wider">11 SAGAS</div>
+            <div className="font-mono text-xs uppercase font-bold text-neutral-400">EPIC STORY VOLUMES</div>
           </div>
-          <div className="text-center p-3">
-            <div className="text-2xl sm:text-3xl font-extrabold text-amber-400 font-mono">25+ Yrs</div>
-            <div className="text-xs text-[#a99577] uppercase tracking-wider font-semibold mt-1">Eiichiro Oda Legacy</div>
+          <div className="border-3 border-white p-4 bg-black text-center shadow-[4px_4px_0px_#ffffff]">
+            <div className="font-['Bangers'] text-4xl text-white tracking-wider">1997 – NOW</div>
+            <div className="font-mono text-xs uppercase font-bold text-neutral-400">EIICHIRO ODA'S ART</div>
           </div>
         </div>
 

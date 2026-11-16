@@ -10,7 +10,7 @@ import WantedPosterGenerator from './components/WantedPosterGenerator';
 import LiveApiExplorer from './components/LiveApiExplorer';
 import Footer from './components/Footer';
 import { SAGAS } from './data/sagas';
-import { Award, Flame, Scroll, Play, Sparkles, Anchor, ChevronRight } from 'lucide-react';
+import { Bookmark, Flame, FileText, Film, Sparkles, Search, ChevronRight } from 'lucide-react';
 import { playHakiPulse } from './utils/audio';
 
 export default function App() {
@@ -25,15 +25,14 @@ export default function App() {
     }
   });
 
-  // Scroll to top whenever tab changes
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [activeTab]);
 
   return (
-    <div className="min-h-screen flex flex-col bg-[#0d0906] text-[#eae0d5] font-sans antialiased selection:bg-amber-500 selection:text-black">
+    <div className="min-h-screen flex flex-col bg-black text-white font-['Space_Grotesk'] antialiased selection:bg-white selection:text-black">
       
-      {/* Nautical Header & Navigation */}
+      {/* Manga Header */}
       <Navbar
         activeTab={activeTab}
         setActiveTab={setActiveTab}
@@ -48,7 +47,7 @@ export default function App() {
         {activeTab === 'hub' && (
           <>
             <HeroBanner setActiveTab={setActiveTab} />
-            <HubQuickPortals setActiveTab={setActiveTab} />
+            <MangaPortalsSection setActiveTab={setActiveTab} />
           </>
         )}
 
@@ -66,69 +65,69 @@ export default function App() {
         {activeTab === 'live' && <LiveApiExplorer />}
       </main>
 
-      {/* Pirate Creed & Footer */}
+      {/* Manga End-of-Chapter Footer */}
       <Footer setActiveTab={setActiveTab} />
 
     </div>
   );
 }
 
-// Quick Portals Showcase displayed on the Voyage Hub
-function HubQuickPortals({ setActiveTab }) {
+// Manga Chapter Portals displayed on the Splash Spread
+function MangaPortalsSection({ setActiveTab }) {
   const portals = [
     {
       id: 'characters',
-      title: 'Bounties & Lore Wiki',
-      desc: 'Over 20+ prominent pirate and marine dossiers with bounties, haki masteries, and signature moves.',
-      icon: Award,
-      badge: '30+ Profiles',
-      color: 'from-amber-700 to-amber-900',
-      action: 'Browse Wanted Posters'
+      title: 'CHARACTER ARCHIVE',
+      sub: '登場人物',
+      desc: '20+ canonical pirate & Marine dossiers illustrated in pen-and-ink with Haki awakenings and combat assessments.',
+      icon: Bookmark,
+      badge: 'CH. 1 – 1120+',
+      action: 'VIEW MANGA PANELS'
     },
     {
       id: 'fruits',
-      title: 'Devil Fruit Encyclopedia',
-      desc: 'Explore Mythical Zoan Sun God Nika, Op-Op surgery domains, and catastrophic Logias.',
+      title: 'DEVIL FRUIT SBS',
+      sub: '悪魔の実図鑑',
+      desc: 'Oda SBS corner detailing Paramecia, Logia, and Mythical Zoan God awakenings with ink diagrams.',
       icon: Flame,
-      badge: 'Awakenings',
-      color: 'from-orange-700 to-red-900',
-      action: 'Examine Cursed Powers'
+      badge: 'AWAKENINGS',
+      action: 'EXAMINE CURSED FRUITS'
     },
     {
       id: 'sagas',
-      title: '11 Sagas & Canon Tracker',
-      desc: 'Episode guide from Romance Dawn to Egghead Island with filler filters and progress tracking.',
-      icon: Scroll,
-      badge: '1,120+ Episodes',
-      color: 'from-yellow-700 to-amber-900',
-      action: 'Track Voyage Progress'
+      title: '11 SAGAS CANON GUIDE',
+      sub: '航海記録',
+      desc: 'Full manga chapter & saga breakdown with filler flags and an interactive volume reading tracker.',
+      icon: FileText,
+      badge: 'VOL. 1 – 108+',
+      action: 'INSPECT CHAPTER LOG'
     },
     {
       id: 'cinema',
-      title: 'Grand Line Cinema & OST',
-      desc: 'Official high-definition Toei trailers, Gear 5 climax videos, and pirate sound synthesizers.',
-      icon: Play,
-      badge: 'Climax Trailers',
-      color: 'from-red-700 to-rose-950',
-      action: 'Enter Theatre'
+      title: 'MANGA THEATRE & SFX',
+      sub: '映像化・効果音',
+      desc: 'Official high-definition Toei trailers framed in comic panels with live Web Audio SFX synthesizers.',
+      icon: Film,
+      badge: 'DON!! ドン!!',
+      action: 'ENTER THEATRE'
     },
     {
       id: 'generator',
-      title: 'Custom Wanted Maker',
-      desc: 'Forge your personal Marine Wanted Poster with custom photo upload and high-res PNG download.',
-      icon: Anchor,
-      badge: 'Export Ready',
-      color: 'from-amber-600 to-yellow-800',
-      action: 'Create Your Bounty'
+      title: 'MANGA WANTED FORGE',
+      sub: '手配書作成',
+      desc: 'Forge your personal black-and-white woodcut Wanted Poster with custom photo upload and high-res PNG export.',
+      icon: Search,
+      badge: '300 DPI EXPORT',
+      action: 'FORGE YOUR BOUNTY'
     },
     {
       id: 'games',
-      title: 'Devil Fruit Quiz & Crew Builder',
-      desc: 'Discover your awakened power, draft your 5B armada, and duel in bounty higher/lower.',
+      title: 'MANGA TAVERN GAMES',
+      sub: '酒場遊戯',
+      desc: 'Devil Fruit awakening personality quiz, 5B Berry armada draft, and bounty duel showdowns.',
       icon: Sparkles,
-      badge: '3 Interactive Games',
-      color: 'from-purple-800 to-stone-900',
-      action: 'Play Tavern Games'
+      badge: 'GOGOGO!! ゴゴゴ',
+      action: 'PLAY CHALLENGES'
     }
   ];
 
@@ -139,17 +138,17 @@ function HubQuickPortals({ setActiveTab }) {
 
   return (
     <section className="py-12 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4 border-b border-[#442b17] pb-4">
+      <div className="flex flex-col sm:flex-row sm:items-end justify-between mb-8 gap-4 border-b-4 border-white pb-4">
         <div>
-          <span className="text-xs font-mono uppercase text-amber-400 font-bold tracking-widest">
-            THE ARCHIVES OF THE SEVEN SEAS
+          <span className="text-xs font-mono uppercase text-neutral-400 font-black tracking-widest">
+            週刊少年ジャンプ目録 • CHAPTER DIRECTORY
           </span>
-          <h2 className="font-['Pirata_One'] text-3xl sm:text-4xl text-amber-200 mt-1">
-            EXPLORE THE VOYAGE DIRECTORY
+          <h2 className="font-['Bangers'] text-4xl sm:text-5xl text-white tracking-widest mt-1">
+            EXPLORE MANGA ARCHIVES
           </h2>
         </div>
-        <p className="text-xs sm:text-sm text-[#a48e75] font-serif max-w-md">
-          Select a sector to dive directly into detailed One Piece encyclopedias, interactive mini-games, and media vaults.
+        <p className="text-xs sm:text-sm text-neutral-300 font-serif max-w-md">
+          Select any sector to jump directly into deep One Piece lore, interactive tools, and manga chapter records.
         </p>
       </div>
 
@@ -160,29 +159,35 @@ function HubQuickPortals({ setActiveTab }) {
             <div
               key={portal.id}
               onClick={() => handlePortal(portal.id)}
-              className="group p-6 rounded-2xl bg-[#191009] border-2 border-[#4d3219] hover:border-amber-400 transition-all duration-300 hover:-translate-y-1 cursor-pointer flex flex-col justify-between shadow-xl relative overflow-hidden"
+              className="manga-box-paper p-6 flex flex-col justify-between cursor-pointer group select-none relative"
             >
-              <div className="relative z-10">
-                <div className="flex items-center justify-between mb-4">
-                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${portal.color} flex items-center justify-center text-amber-200 shadow-md`}>
-                    <Icon className="w-6 h-6" />
+              <div>
+                <div className="flex items-center justify-between border-b-2 border-black pb-2 mb-3">
+                  <div className="w-10 h-10 border-2 border-black bg-black text-white flex items-center justify-center">
+                    <Icon className="w-5 h-5" />
                   </div>
-                  <span className="text-[10px] font-mono px-2 py-0.5 rounded-full bg-[#2a1a0f] text-amber-400 font-bold border border-[#5a391c]">
+                  <span className="text-[10px] font-mono px-2 py-0.5 border border-black bg-black text-white font-black">
                     {portal.badge}
                   </span>
                 </div>
 
-                <h3 className="font-['Pirata_One'] text-2xl text-amber-200 group-hover:text-amber-300 transition-colors">
-                  {portal.title}
-                </h3>
-                <p className="text-xs text-[#b59f83] font-serif leading-relaxed mt-2">
+                <div className="flex items-center justify-between">
+                  <h3 className="font-['Bangers'] text-2xl text-black tracking-wider group-hover:underline">
+                    {portal.title}
+                  </h3>
+                  <span className="font-['Shippori_Mincho_B1'] text-xs font-bold text-neutral-600">
+                    {portal.sub}
+                  </span>
+                </div>
+
+                <p className="text-xs text-neutral-800 font-serif leading-relaxed mt-2">
                   {portal.desc}
                 </p>
               </div>
 
-              <div className="relative z-10 mt-6 pt-4 border-t border-[#342011] flex items-center justify-between text-xs font-bold text-amber-400 group-hover:text-amber-300">
+              <div className="mt-6 pt-3 border-t-2 border-black flex items-center justify-between text-xs font-mono font-bold text-black group-hover:bg-black group-hover:text-white px-2 py-1 transition-colors">
                 <span>{portal.action}</span>
-                <ChevronRight className="w-4 h-4 group-hover:translate-x-1.5 transition-transform" />
+                <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </div>
             </div>
           );
