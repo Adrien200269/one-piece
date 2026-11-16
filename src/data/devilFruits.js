@@ -53,7 +53,7 @@ export const DEVIL_FRUITS = [
     },
     weakness: 'Massive collateral destruction that can sink allied ships.',
     dangerLevel: 'World-Destroying Power',
-    mangaArt: '/manga/characters/whitebeard.jpg',
+    mangaArt: '/manga/oda_panels/whitebeard.png',
     kanjiTag: '震'
   },
   {

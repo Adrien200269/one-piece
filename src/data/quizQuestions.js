@@ -77,7 +77,7 @@ export const QUIZ_RESULTS = {
     title: 'The Earth-Shattering Patriarch (大海賊)',
     description: 'Family and honor come above everything. You wield the power to shake oceans and break atmospheric boundaries. Anyone who threatens your crew faces an island-splitting shockwave.',
     sfx: 'グララララ!! (GURARARA!)',
-    mangaArt: '/manga/characters/whitebeard.jpg',
+    mangaArt: '/manga/oda_panels/whitebeard.png',
     kanji: '震動'
   },
   mera: {
@@ -95,7 +95,7 @@ export const QUIZ_RESULTS = {
     title: 'The Emperor of Fortune (千両道化)',
     description: 'Slash-proof, charismatic, and destined for greatness despite yourself! Through sheer comedic destiny and flamboyant survival, you’ve ascended to Emperor of the Sea!',
     sfx: 'ハデにドーン!! (FLASHY DON!)',
-    mangaArt: '/manga/characters/buggy.jpg',
+    mangaArt: '/manga/oda_panels/buggy.png',
     kanji: '道化'
   }
 };

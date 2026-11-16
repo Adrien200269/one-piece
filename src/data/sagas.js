@@ -102,7 +102,7 @@ export const SAGAS = [
     keyVillain: 'Gecko Moria & Oars / Bartholomew Kuma',
     highlightFights: ['Nightmare Luffy vs. Oars', 'Zoro’s "Nothing Happened" vs. Kuma', 'Zoro vs. Ryuma'],
     synopsis: 'Trapped in the Florian Triangle aboard the largest ghost island ship, the crew battles Gecko Moria to recover their stolen shadows and recruits Brook.',
-    mangaPanel: '/manga/characters/brook.jpg',
+    mangaPanel: '/manga/oda_panels/brook.png',
     majorArcs: [
       { name: 'Thriller Bark Arc', episodes: '337-381', filler: false },
       { name: 'Spa Island Arc (Filler)', episodes: '382-384', filler: true }
@@ -145,7 +145,7 @@ export const SAGAS = [
     keyVillain: 'Hody Jones (New Fish-Man Pirates)',
     highlightFights: ['Luffy vs. Hody Jones (Elephant Gatling)', 'Straw Hats vs. 100,000 Fish-Men', 'Zoro underwater vs. Hody'],
     synopsis: 'Reuniting after 2 years of training, the upgraded Straw Hats plunge 10,000 meters under the sea to protect Fish-Man Island and declare war on Big Mom.',
-    mangaPanel: '/manga/characters/jinbe.jpg',
+    mangaPanel: '/manga/oda_panels/jinbe.png',
     majorArcs: [
       { name: 'Return to Sabaody Arc', episodes: '517-522', filler: false },
       { name: 'Fish-Man Island Arc', episodes: '523-574', filler: false }
@@ -185,7 +185,7 @@ export const SAGAS = [
     keyVillain: 'Charlotte Linlin (Big Mom) & Charlotte Katakuri',
     highlightFights: ['Luffy vs. Katakuri (Snakeman & Future Sight)', 'Sanji vs. Luffy', 'Brook vs. Big Mom (Soul King heist)'],
     synopsis: 'A stealth rescue team travels to the territory of Yonko Big Mom to retrieve Sanji from an arranged political wedding, stealing Road Poneglyph rubbings along the way.',
-    mangaPanel: '/manga/characters/sanji.jpg',
+    mangaPanel: '/manga/oda_panels/sanji.png',
     majorArcs: [
       { name: 'Zou Arc', episodes: '751-779', filler: false },
       { name: 'Whole Cake Island Arc', episodes: '783-877', filler: false },

@@ -44,7 +44,7 @@ const MANGA_TRAILERS = [
     chapterRef: 'Ch. 1055 Tie-In / Red Hair Shanks',
     youtubeId: '89JWRYEIG-s',
     duration: '1:58',
-    thumbnail: '/manga/characters/shanks.jpg',
+    thumbnail: '/manga/oda_panels/shanks.png',
     description: 'The world’s greatest diva Uta performs on the music island of Elegia, harboring a secret that connects her to Shanks.'
   },
   {

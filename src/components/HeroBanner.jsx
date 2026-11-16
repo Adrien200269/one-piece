@@ -138,7 +138,7 @@ export default function HeroBanner({ setActiveTab }) {
               {/* Main Manga Panel Graphic */}
               <div className="relative border-4 border-white bg-black overflow-hidden aspect-[4/3] flex items-center justify-center">
                 <img
-                  src="/manga/characters/luffy-full.jpg"
+                  src="/manga/oda_panels/gear5.png"
                   alt="Monkey D. Luffy Manga Panel"
                   className="w-full h-full object-cover object-top manga-ink-img scale-105"
                 />

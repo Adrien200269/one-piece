@@ -21,8 +21,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Bajrang Gun', 'Gum-Gum Red Roc', 'King Kong Gun', 'Gum-Gum Gatling'],
     famousQuote: 'If you don’t take risks, you can’t create a future! I’m going to be King of the Pirates!',
-    mangaImage: '/manga/characters/luffy.jpg',
-    panelCrop: '/manga/characters/dex-luffy.webp',
+    mangaImage: '/manga/oda_panels/luffy.png',
+    panelCrop: '/manga/oda_panels/luffy.png',
     stats: { power: 99, speed: 96, defense: 95, haki: 99, intellect: 70 }
   },
   {
@@ -42,8 +42,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['King of Hell: Dragon Damnation', 'Asura: Dead Man’s Game', 'Billion-fold World Trichiliocosm'],
     famousQuote: 'Scars on the back are a swordsman’s shame. When I decided to follow my dream, I had already discarded my life.',
-    mangaImage: '/manga/characters/zoro.jpg',
-    panelCrop: '/manga/characters/dex-zoro.webp',
+    mangaImage: '/manga/oda_panels/zoro.png',
+    panelCrop: '/manga/oda_panels/zoro.png',
     stats: { power: 96, speed: 92, defense: 97, haki: 95, intellect: 80 }
   },
   {
@@ -63,8 +63,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Zeus Breeze Tempo', 'Thunder Lance Tempo', 'Mirage Tempo'],
     famousQuote: 'What good is having what you want if you can’t share it with the friends you love?',
-    mangaImage: '/manga/characters/nami.jpg',
-    panelCrop: '/manga/characters/dex-nami.webp',
+    mangaImage: '/manga/oda_panels/nami.png',
+    panelCrop: '/manga/oda_panels/nami.png',
     stats: { power: 72, speed: 82, defense: 68, haki: 50, intellect: 98 }
   },
   {
@@ -84,8 +84,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Pop Green: Firebird Star', 'Kuro Kabuto Sniping', 'Impact Dial'],
     famousQuote: 'There comes a time when a man has to stand and fight! That is when his friend’s dreams are laughed at!',
-    mangaImage: '/manga/characters/usopp.jpg',
-    panelCrop: '/manga/characters/dex-usopp.webp',
+    mangaImage: '/manga/oda_panels/usopp.png',
+    panelCrop: '/manga/oda_panels/usopp.png',
     stats: { power: 74, speed: 80, defense: 75, haki: 76, intellect: 94 }
   },
   {
@@ -105,8 +105,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Ifrit Jambe: Boeuf Burst', 'Diable Jambe: Flambage Shot', 'Concassé'],
     famousQuote: 'A man forgives a woman’s lies. Cooking is a gift from the gods; spices are a gift from the devil.',
-    mangaImage: '/manga/characters/sanji.jpg',
-    panelCrop: '/manga/characters/dex-sanji.webp',
+    mangaImage: '/manga/oda_panels/sanji.png',
+    panelCrop: '/manga/oda_panels/sanji.png',
     stats: { power: 94, speed: 98, defense: 95, haki: 92, intellect: 91 }
   },
   {
@@ -131,8 +131,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Monster Point: Palm Strike', 'Kung Fu Point', 'Brain Point: Scope'],
     famousQuote: 'I’m not a pet! Even if you praise me, it won’t make me happy, you bastard!',
-    mangaImage: '/manga/characters/chopper.jpg',
-    panelCrop: '/manga/characters/dex-chopper.webp',
+    mangaImage: '/manga/oda_panels/chopper.png',
+    panelCrop: '/manga/oda_panels/chopper.png',
     stats: { power: 84, speed: 78, defense: 86, haki: 40, intellect: 97 }
   },
   {
@@ -157,8 +157,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Demonio Fleur: Grand Jacuzzi Clutch', 'Gigante Fleur', 'Mil Fleur'],
     famousQuote: 'I want to live! Take me with you to the sea!',
-    mangaImage: '/manga/characters/robin.jpg',
-    panelCrop: '/manga/characters/dex-robin.webp',
+    mangaImage: '/manga/oda_panels/robin.png',
+    panelCrop: '/manga/oda_panels/robin.png',
     stats: { power: 88, speed: 82, defense: 83, haki: 75, intellect: 99 }
   },
   {
@@ -178,8 +178,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Radical Beam', 'General Cannon', 'Coup de Vent'],
     famousQuote: 'Superrrr! No matter what weapons you may hold, just being alive isn’t a crime!',
-    mangaImage: '/manga/characters/franky.jpg',
-    panelCrop: '/manga/characters/dex-franky.webp',
+    mangaImage: '/manga/oda_panels/franky.png',
+    panelCrop: '/manga/oda_panels/franky.png',
     stats: { power: 90, speed: 76, defense: 94, haki: 60, intellect: 95 }
   },
   {
@@ -204,8 +204,8 @@ export const CHARACTERS = [
     status: 'Alive (Undead Skeleton)',
     signatureMoves: ['Song of Scratches: Blizzard Slice', 'Soul Solid', 'Lullaby Flurry'],
     famousQuote: 'Yo-ho-ho-ho! May I see your panties? Neither god nor devil can extinguish this soul!',
-    mangaImage: '/manga/characters/brook.jpg',
-    panelCrop: '/manga/characters/dex-brook.webp',
+    mangaImage: '/manga/oda_panels/brook.png',
+    panelCrop: '/manga/oda_panels/brook.png',
     stats: { power: 85, speed: 93, defense: 81, haki: 65, intellect: 88 }
   },
   {
@@ -225,8 +225,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Fish-Man Karate: Demon Brick Fist', 'Vagabond Drill', 'Water Shot'],
     famousQuote: 'I am a man who wants to be part of the future Pirate King’s crew! I cannot cower before a mere Yonko!',
-    mangaImage: '/manga/characters/jinbe.jpg',
-    panelCrop: '/manga/characters/dex-jinbe.webp',
+    mangaImage: '/manga/oda_panels/jinbe.png',
+    panelCrop: '/manga/oda_panels/jinbe.png',
     stats: { power: 93, speed: 85, defense: 98, haki: 93, intellect: 92 }
   },
   {
@@ -246,8 +246,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Divine Departure (Kamusari)', 'WiFi Haki Blast', 'Gryphon Blade Dance'],
     famousQuote: 'Listen up! You can pour drinks on me, you can throw food at me... but no matter what the reason, I won’t forgive anyone who hurts my friends!',
-    mangaImage: '/manga/characters/shanks.jpg',
-    panelCrop: '/manga/characters/dex-shanks.webp',
+    mangaImage: '/manga/oda_panels/shanks.png',
+    panelCrop: '/manga/oda_panels/shanks.png',
     stats: { power: 99, speed: 99, defense: 94, haki: 100, intellect: 97 }
   },
   {
@@ -272,8 +272,8 @@ export const CHARACTERS = [
     status: 'Deceased (Died standing at Marineford)',
     signatureMoves: ['Island Shaking Punch', 'Air Fracture Blade', 'Murakumogiri Cleave'],
     famousQuote: 'THE ONE PIECE IS REAL! A man’s heart belongs to the sea.',
-    mangaImage: '/manga/characters/whitebeard.jpg',
-    panelCrop: '/manga/characters/dex-whitebeard.webp',
+    mangaImage: '/manga/oda_panels/whitebeard.png',
+    panelCrop: '/manga/oda_panels/whitebeard.png',
     stats: { power: 100, speed: 85, defense: 100, haki: 99, intellect: 94 }
   },
   {
@@ -293,8 +293,8 @@ export const CHARACTERS = [
     status: 'Deceased (Executed in Loguetown)',
     signatureMoves: ['Divine Departure (Kamusari)', 'Ace Cut', 'Conqueror’s Sky Split'],
     famousQuote: 'My treasure? Why, it’s where I left it. You’ll have to search the whole world!',
-    mangaImage: '/manga/characters/roger.webp',
-    panelCrop: '/manga/characters/roger.webp',
+    mangaImage: '/manga/oda_panels/roger.png',
+    panelCrop: '/manga/oda_panels/roger.png',
     stats: { power: 100, speed: 99, defense: 98, haki: 100, intellect: 98 }
   },
   {
@@ -319,8 +319,8 @@ export const CHARACTERS = [
     status: 'Defeated in Wano Magma Depths',
     signatureMoves: ['Flaming Dragon Torch', 'Thunder Bagua', 'Blast Breath'],
     famousQuote: 'Only Haki can transcend all! Roger conquered the world without any fruit ability!',
-    mangaImage: '/manga/characters/kaido.jpg',
-    panelCrop: '/manga/characters/dex-kaido.webp',
+    mangaImage: '/manga/oda_panels/kaido.png',
+    panelCrop: '/manga/oda_panels/kaido.png',
     stats: { power: 100, speed: 90, defense: 100, haki: 98, intellect: 88 }
   },
   {
@@ -345,8 +345,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['K-ROOM: Puncture Wille', 'Shock Wille', 'Gamma Knife', 'Shambles'],
     famousQuote: 'The weak do not have the right to choose how they die.',
-    mangaImage: '/manga/characters/law.jpg',
-    panelCrop: '/manga/characters/dex-law.webp',
+    mangaImage: '/manga/oda_panels/law.png',
+    panelCrop: '/manga/oda_panels/law.png',
     stats: { power: 94, speed: 93, defense: 90, haki: 92, intellect: 99 }
   },
   {
@@ -371,8 +371,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Special Muggy Bomb', 'Bara Bara Festival'],
     famousQuote: 'WE ARE GOING TO CLAIM THE ONE PIECE!',
-    mangaImage: '/manga/characters/buggy.jpg',
-    panelCrop: '/manga/characters/dex-buggy.webp',
+    mangaImage: '/manga/oda_panels/buggy.png',
+    panelCrop: '/manga/oda_panels/buggy.png',
     stats: { power: 65, speed: 70, defense: 85, haki: 40, intellect: 88 }
   },
   {
@@ -397,8 +397,8 @@ export const CHARACTERS = [
     status: 'Deceased (Sacrificed himself to save Luffy)',
     signatureMoves: ['Dai Enkai: Entei (Great Flame Commandment)', 'Hiken (Fire Fist)'],
     famousQuote: 'Thank you for loving me!',
-    mangaImage: '/manga/characters/ace.jpg',
-    panelCrop: '/manga/characters/dex-ace.webp',
+    mangaImage: '/manga/oda_panels/ace.png',
+    panelCrop: '/manga/oda_panels/ace.png',
     stats: { power: 92, speed: 91, defense: 84, haki: 88, intellect: 86 }
   },
   {
@@ -418,8 +418,8 @@ export const CHARACTERS = [
     status: 'Alive (MIA at Hachinosu)',
     signatureMoves: ['Galaxy Impact', 'Galaxy Divide', 'Fist of Love'],
     famousQuote: 'You young punks have the future ahead of you! Don’t you dare throw your lives away!',
-    mangaImage: '/manga/characters/garp.jpg',
-    panelCrop: '/manga/characters/dex-garp.webp',
+    mangaImage: '/manga/oda_panels/garp.png',
+    panelCrop: '/manga/oda_panels/garp.png',
     stats: { power: 99, speed: 92, defense: 98, haki: 99, intellect: 89 }
   },
   {
@@ -439,8 +439,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Black Blade: Night Slicer', 'World Strongest Slash', 'Tsubame Gaeshi'],
     famousQuote: 'It takes no effort to crush an insect... but I am not merciless enough to hunt a rabbit with a cannon.',
-    mangaImage: '/manga/characters/mihawk.jpg',
-    panelCrop: '/manga/characters/mihawk.jpg',
+    mangaImage: '/manga/oda_panels/mihawk.png',
+    panelCrop: '/manga/oda_panels/mihawk.png',
     stats: { power: 99, speed: 97, defense: 95, haki: 99, intellect: 96 }
   },
   {
@@ -465,8 +465,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Desert Spada', 'Sables: Pesado', 'Ground Death'],
     famousQuote: 'Dogs that run away to nurse their wounds have no right to speak of justice. This sea is a place for monsters.',
-    mangaImage: '/manga/characters/crocodile.jpg',
-    panelCrop: '/manga/characters/crocodile.jpg',
+    mangaImage: '/manga/oda_panels/crocodile.png',
+    panelCrop: '/manga/oda_panels/crocodile.png',
     stats: { power: 93, speed: 90, defense: 91, haki: 91, intellect: 98 }
   },
   {
@@ -491,8 +491,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Black Hole', 'Liberation', 'Quake Smash', 'Kurouzu'],
     famousQuote: 'PEOPLE’S DREAMS HAVE NO END! ZEHAHAHAHA!',
-    mangaImage: '/manga/characters/blackbeard.webp',
-    panelCrop: '/manga/characters/blackbeard.webp',
+    mangaImage: '/manga/oda_panels/blackbeard.png',
+    panelCrop: '/manga/oda_panels/blackbeard.png',
     stats: { power: 99, speed: 86, defense: 94, haki: 96, intellect: 97 }
   },
   {
@@ -517,8 +517,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Mero Mero Mellow', 'Slave Arrow', 'Perfume Femur'],
     famousQuote: 'Whether I kick a puppy, tear off your ears, or commit murder... the world will forgive me! Why? Because I am beautiful!',
-    mangaImage: '/manga/characters/hancock.jpg',
-    panelCrop: '/manga/characters/hancock.jpg',
+    mangaImage: '/manga/oda_panels/hancock.png',
+    panelCrop: '/manga/oda_panels/hancock.png',
     stats: { power: 93, speed: 94, defense: 89, haki: 93, intellect: 90 }
   },
   {
@@ -543,8 +543,8 @@ export const CHARACTERS = [
     status: 'Imprisoned in Impel Down Level 6',
     signatureMoves: ['God Thread (16 Flashing Bullets)', 'Birdcage', 'Parasite String', 'Overheat'],
     famousQuote: 'Pirates are evil? The Marines are righteous? Justice will prevail, you say? Whoever wins this war becomes justice!',
-    mangaImage: '/manga/characters/doflamingo.jpg',
-    panelCrop: '/manga/characters/doflamingo.jpg',
+    mangaImage: '/manga/oda_panels/doflamingo.png',
+    panelCrop: '/manga/oda_panels/doflamingo.png',
     stats: { power: 94, speed: 93, defense: 93, haki: 92, intellect: 98 }
   },
   {
@@ -564,8 +564,8 @@ export const CHARACTERS = [
     status: 'Alive',
     signatureMoves: ['Internal Destruction Palm', 'Conqueror’s Stun Field', 'Precision Sword Cleave'],
     famousQuote: 'To live without doubts... that is true strength!',
-    mangaImage: '/manga/characters/rayleigh.webp',
-    panelCrop: '/manga/characters/rayleigh.webp',
+    mangaImage: '/manga/oda_panels/rayleigh.png',
+    panelCrop: '/manga/oda_panels/rayleigh.png',
     stats: { power: 98, speed: 96, defense: 95, haki: 99, intellect: 99 }
   }
 ];

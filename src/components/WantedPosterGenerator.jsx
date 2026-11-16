@@ -12,14 +12,14 @@ import confetti from 'canvas-confetti';
 import { playCannonBlast, playTreasureFanfare, playWoodenClick } from '../utils/audio';
 
 const MANGA_PORTRAIT_PRESETS = [
-  { label: 'Luffy (Straw Hat)', url: '/manga/characters/luffy.jpg' },
-  { label: 'Zoro (King of Hell)', url: '/manga/characters/zoro.jpg' },
-  { label: 'Shanks (Red Hair)', url: '/manga/characters/shanks.jpg' },
-  { label: 'Whitebeard (Quake)', url: '/manga/characters/whitebeard.jpg' },
-  { label: 'Law (Surgeon of Death)', url: '/manga/characters/law.jpg' },
-  { label: 'Ace (Fire Fist)', url: '/manga/characters/ace.jpg' },
-  { label: 'Kaido (Dragon Emperor)', url: '/manga/characters/kaido.jpg' },
-  { label: 'Sanji (Black Leg)', url: '/manga/characters/sanji.jpg' },
+  { label: 'Luffy (Straw Hat)', url: '/manga/oda_panels/luffy.png' },
+  { label: 'Zoro (King of Hell)', url: '/manga/oda_panels/zoro.png' },
+  { label: 'Shanks (Red Hair)', url: '/manga/oda_panels/shanks.png' },
+  { label: 'Whitebeard (Quake)', url: '/manga/oda_panels/whitebeard.png' },
+  { label: 'Law (Surgeon of Death)', url: '/manga/oda_panels/law.png' },
+  { label: 'Ace (Fire Fist)', url: '/manga/oda_panels/ace.png' },
+  { label: 'Kaido (Dragon Emperor)', url: '/manga/oda_panels/kaido.png' },
+  { label: 'Sanji (Black Leg)', url: '/manga/oda_panels/sanji.png' },
 ];
 
 export default function WantedPosterGenerator() {
