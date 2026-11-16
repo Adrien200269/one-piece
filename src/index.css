@@ -1,0 +1,87 @@
+@import "tailwindcss";
+
+@theme {
+  --font-pirate: 'Pirata One', cursive;
+  --font-cinzel: 'Cinzel', serif;
+  --font-bangers: 'Bangers', cursive;
+  --font-outfit: 'Outfit', sans-serif;
+  --color-pirate-gold: #d4af37;
+  --color-pirate-crimson: #9e1a1a;
+  --color-parchment: #f3edd9;
+  --color-parchment-card: #e8dcbf;
+  --color-sea-navy: #0d1726;
+  --color-dark-wood: #1e1510;
+}
+
+/* Wanted Poster Stylings & Textures */
+.wanted-paper {
+  background-color: #f1e4c3;
+  background-image: 
+    radial-gradient(#d3c39d 15%, transparent 16%),
+    radial-gradient(#c2b18b 15%, transparent 16%);
+  background-size: 60px 60px;
+  background-position: 0 0, 30px 30px;
+  box-shadow: 
+    inset 0 0 60px rgba(80, 50, 20, 0.4),
+    0 15px 35px rgba(0, 0, 0, 0.6),
+    0 2px 5px rgba(0, 0, 0, 0.4);
+  border: 4px solid #573a1e;
+}
+
+/* Aged Parchment */
+.parchment-bg {
+  background: linear-gradient(135deg, #f7efe1 0%, #ecdcb9 50%, #dfca9f 100%);
+  color: #2b1d0c;
+}
+
+/* Wooden Ship Plank Texture */
+.wood-bg {
+  background: linear-gradient(180deg, #24160e 0%, #170d08 100%);
+  border-color: #4a3018;
+}
+
+/* Golden Haki Glow */
+.gold-glow {
+  box-shadow: 0 0 25px rgba(212, 175, 55, 0.35);
+}
+
+.crimson-glow {
+  box-shadow: 0 0 25px rgba(158, 26, 26, 0.45);
+}
+
+/* Custom Pirate Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #0f141c;
+}
+::-webkit-scrollbar-thumb {
+  background: #3c2a1a;
+  border: 2px solid #573e27;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #d4af37;
+}
+
+/* Shimmer Animation */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite;
+}
+
+/* Compass Spin on Hover */
+.spin-slow {
+  animation: spin 20s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
